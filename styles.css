@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    background-color: #808080a6;
+}
+
+header {
+    background-color: #1702dac9;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #100147;
+}
+
+main {
+    padding: 0rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 80px);
+    
+    
+}
+
+.intro {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #100147;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.icon {
+    margin: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #abb2bf;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: #19d800a6;
+    transform: scale(1.2);
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #a0a0a0;
+}
+.dark-mode {
+    background-color: #282c35; /* dark background color */
+    color: #ffffff; /* light text color */
+    /* Add other dark mode styles as needed */
+}
+
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #1802dad3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #100147;
+}
