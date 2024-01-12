@@ -14,13 +14,7 @@ header {
     color: #100147;
 }
 
-main {
-    padding: 0rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    height: calc(100vh - 80px); 
-}
+
 
 .intro {
     font-size: 1.5rem;
@@ -60,6 +54,51 @@ main {
     background-color: #282c35;
     color: #ffffff; 
 }
+
+main {
+    padding: 2rem; /* Increased padding for better spacing */
+    text-align: center;
+    position: relative;
+}
+
+.gears-container {
+    position: relative;
+    display: inline-block;
+}
+
+#gears {
+    display: block;
+    margin: 0 auto; /* Center the canvas horizontally */
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Allow mouse events to pass through the overlay container */
+
+}
+
+.centered-box {
+    /* Removed absolute positioning */
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    pointer-events: auto; /* Enable mouse events for the UI box */
+
+}
+
 
 footer {
     padding: 1rem;

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the canvas and its 2D rendering context
     const canvas = document.getElementById('gears');
     const context = canvas.getContext('2d');
+    const box = document.getElementById('box');
 
     // Variables for gears animation
     let gears = [];
@@ -56,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to create an array of gears based on screen size
     function createGears() {
-        const numRows = 9;
-        const numCols = 9;
+        const numRows = 20;
+        const numCols = 20;
         const paddingX = 50;
         const paddingY = 50;
 
@@ -140,6 +141,21 @@ document.addEventListener("DOMContentLoaded", function () {
     if (darkModeToggleBtn) {
         darkModeToggleBtn.addEventListener('click', toggleDarkMode);
     }
+
+
+    //   // Function to redirect to selected page
+    //   function redirectToPage(page) {
+    //     if (page) {
+    //         window.location.href = page;
+    //     }
+    // }
+
+    // const BoxToggleBtn = document.getElementById('box')
+    // if(BoxToggleBtn){
+    //     BoxToggleBtn.addEventListener('click', redirectToPage)
+    // }
+  
+    // Event listeners for box interactiopn
 
     // Event listeners for window and canvas interactions
     window.addEventListener('resize', updateCanvasSize);

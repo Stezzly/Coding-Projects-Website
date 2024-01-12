@@ -28,12 +28,28 @@
         </div>
 
         <canvas id="gears"></canvas>
+
+        <div class="gears-container"></div>
+        <div class="overlay-container">
+            <div id="box" class="centered-box" onclick="redirectToPage('App_Development.html')">Box 1</div>
+            <div id="box" class="centered-box" onclick="redirectToPage('Game_Development.html')">Box 2</div>
+            <div id="box" class="centered-box" onclick="redirectToPage('3D_Modelling.html')">Box 3</div>
+            <div id="box" class="centered-box" onclick="redirectToPage('Coding.html')">Box 4</div>
+            
+        </div>
     </main>
+    
 
     <footer>
         Have fun coders!
     </footer>
 
     <script src="script.js"></script>
+    <!--Add redirects to other file - redirect.js or other-->
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+        </script>
 </body>
 </html>
