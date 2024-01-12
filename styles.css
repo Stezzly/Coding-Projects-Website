@@ -19,9 +19,7 @@ main {
     text-align: center;
     position: relative;
     overflow: hidden;
-    height: calc(100vh - 80px);
-    
-    
+    height: calc(100vh - 80px); 
 }
 
 .intro {
@@ -57,12 +55,11 @@ main {
     cursor: pointer;
     color: #a0a0a0;
 }
-.dark-mode {
-    background-color: #282c35; /* dark background color */
-    color: #ffffff; /* light text color */
-    /* Add other dark mode styles as needed */
-}
 
+.dark-mode {
+    background-color: #282c35;
+    color: #ffffff; 
+}
 
 footer {
     padding: 1rem;
