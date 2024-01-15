@@ -1,9 +1,15 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Get the canvas and its 2D rendering context
+    // Get the canvas and its 2D rendering context by id
     const canvas = document.getElementById('gears');
     const context = canvas.getContext('2d');
+
+    // Get UI Elements by id
     const box = document.getElementById('box');
+    const ComputerIcon = document.getElementById("Computer Icon")
+    const BookIcon = document.getElementById("Book Icon")
+    const SettingsIcon = document.getElementById("Settings Icon")
+    
 
     // Variables for gears animation
     let gears = [];
@@ -142,20 +148,25 @@ document.addEventListener("DOMContentLoaded", function () {
         darkModeToggleBtn.addEventListener('click', toggleDarkMode);
     }
 
+    const computerRedirectURL = 'index.html';
+    const bookRedirectURL = 'About_Me_Contact.html';
+    const settingsRedirectURL = 'Settings.html';
 
-    //   // Function to redirect to selected page
-    //   function redirectToPage(page) {
-    //     if (page) {
-    //         window.location.href = page;
-    //     }
-    // }
+    // Event listener for Computer Icon
+    ComputerIcon.addEventListener('click', function () {
+        window.location.href = computerRedirectURL;
+    });
 
-    // const BoxToggleBtn = document.getElementById('box')
-    // if(BoxToggleBtn){
-    //     BoxToggleBtn.addEventListener('click', redirectToPage)
-    // }
-  
-    // Event listeners for box interactiopn
+    // Event listener for Book Icon
+    BookIcon.addEventListener('click', function () {
+        window.location.href = bookRedirectURL;
+    });
+
+    // Event listener for Settings Icon
+    SettingsIcon.addEventListener('click', function () {
+        window.location.href = settingsRedirectURL;
+    });
+
 
     // Event listeners for window and canvas interactions
     window.addEventListener('resize', updateCanvasSize);

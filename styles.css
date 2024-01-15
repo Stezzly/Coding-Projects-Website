@@ -73,31 +73,38 @@ main {
 
 .overlay-container {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Allow mouse events to pass through the overlay container */
-
+    pointer-events: none;
 }
+
+/* Your existing styles remain the same */
 
 .centered-box {
-    /* Removed absolute positioning */
-    width: 100px;
-    height: 100px;
-    background-color: #3498db;
+    width: 300px;
+    height: 150px;
+    background-color: #0092f3;
     color: #fff;
     text-align: center;
-    line-height: 100px;
-    margin: 10px;
+    line-height: 150px;
+    margin: 20px;
     cursor: pointer;
-    pointer-events: auto; /* Enable mouse events for the UI box */
-
+    pointer-events: auto;
+    border-radius: 10px; /* Adjusted border-radius for rounded corners */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.centered-box:hover {
+    background-color: #010c70; /* Change color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+}
+
+
 
 
 footer {
