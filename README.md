@@ -1,6 +1,6 @@
 # Stezzly's Collection
 
-This repository contains the  a basic webpage for app development, including information about Python and JavaScript apps.
+This repository contains a basic webpage containing a collection of some of the projects I am working on.
 
 ## Technologies Used
 
