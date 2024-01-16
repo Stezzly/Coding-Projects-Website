@@ -28,6 +28,7 @@ header {
     align-items: center;
 }
 
+
 .icon {
     margin: 1rem;
     font-size: 3rem;
@@ -35,6 +36,11 @@ header {
     color: #abb2bf;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
+a.icon {
+    text-decoration: none;
+}
+
 
 .icon:hover {
     color: #19d800a6;
@@ -83,7 +89,6 @@ main {
     pointer-events: none;
 }
 
-/* Your existing styles remain the same */
 
 .centered-box {
     width: 300px;

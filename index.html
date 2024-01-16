@@ -11,9 +11,9 @@
         Stezzly'z Collection
 
         <div class="icons-container">
-            <span id = "Computer Icon" class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</span> <!-- Button for indexing the main page -->
-            <span id = "Book Icon" class="icon" aria-label="Book icon" role="img"> &#x1F4DA;</span> <!-- Button for indexing readMe or socials page -->
-            <span id = "Settings Icon" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</span> <!-- Button for indexing settings page -->
+            <a href  = index.html class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</a> <!-- Button for indexing the main page -->
+            <a href = "About_Me_Contact.html" class="icon" aria-label="Book icon" role="img"> &#x1F4DA;</a> <!-- Button for indexing readMe or socials page -->
+            <a href = "Settings.html" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</a> <!-- Button for indexing settings page -->
         </div>
         
         <!-- Add the dark mode toggle button with an id -->
@@ -31,12 +31,12 @@
 
         <div class="gears-container"></div>
         <div class="overlay-container">
-            <div id="box" class="centered-box" onclick="redirectToPage('App_Development.html')">App Development</div>
-            <div id="box" class="centered-box" onclick="redirectToPage('Game_Development.html')">Game Development</div>
-            <div id="box" class="centered-box" onclick="redirectToPage('3D_Modelling.html')">3D Modelling</div>
-            <div id="box" class="centered-box" onclick="redirectToPage('Coding.html')">Coding</div>
-            
+            <a href="App_Development.html" class="centered-box">App Development</a>
+            <a href="Game_Development.html" class="centered-box">Game Development</a>
+            <a href="3D_Modelling.html" class="centered-box">3D Modelling</a>
+            <a href="Coding.html" class="centered-box">Coding</a>
         </div>
+        
     </main>
     
 
@@ -46,10 +46,6 @@
 
     <script src="script.js"></script>
     <!--Add redirects to other file - redirect.js or other-->
-    <script>
-        function redirectToPage(page) {
-            window.location.href = page;
-        }
-        </script>
+    
 </body>
 </html>
