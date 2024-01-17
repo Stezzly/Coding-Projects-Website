@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const y = paddingY + row * (gearHeight + paddingY);
 
                 const radius = Math.min(gearWidth, gearHeight) / 2;
-                const imageSrc = 'BlueberryPie.png'; // Replace with the correct path to your gear image
+                const imageSrc = 'GearForWebPNG.png'; 
                 const speed = 0.01 + Math.random() * 0.01; // Generates a random speed between 0.01 and 0.02
 
                 gears.push(new Gear(x, y, radius, imageSrc, speed));
