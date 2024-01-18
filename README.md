@@ -4,7 +4,7 @@ This repository contains a basic webpage containing a collection of some of the 
 
 ## Usage
 
-To run the webpage, you can simply search [Stezzly.github.io](Stezzly.github.io) in your browser! You can also clone the project and run it that way if you would like file in a web browser.
+To run the webpage, you can simply search [Stezzly.github.io](https://Stezzly.github.io) in your browser! You can also clone the project and run it that way if you would like file in a web browser.
 
 
 
