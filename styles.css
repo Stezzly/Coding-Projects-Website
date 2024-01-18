@@ -9,12 +9,20 @@ body {
 header {
     background-color: #1702dac9;
     padding: 1rem;
-    text-align: center;
     font-size: 2rem;
     color: #100147;
+    
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+}
 
+.header-text {
+    flex-grow: 1; /* Allow for header and icons on same horizontal */
+    margin-left: 111px; /* Dirty way to center header text */
+}
 
 .intro {
     font-size: 1.5rem;
@@ -24,9 +32,11 @@ header {
 
 .icons-container {
     display: flex;
-    justify-content: right;
-    align-items: center;
+    flex-direction: column; 
+    justify-content: flex-end;  
+    align-items: flex-end;  
 }
+
 
 
 .icon {
@@ -48,9 +58,6 @@ a.icon {
 }
 
 .dark-mode-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     font-size: 2rem;
     cursor: pointer;
     color: #a0a0a0;
@@ -62,7 +69,7 @@ a.icon {
 }
 
 main {
-    padding: 2rem; /* Increased padding for better spacing */
+    padding: 2rem; 
     text-align: center;
     position: relative;
 }
@@ -74,7 +81,7 @@ main {
 
 #gears {
     display: block;
-    margin: 0 auto; /* Center the canvas horizontally */
+    margin: 0 auto; 
 }
 
 .overlay-container {
@@ -100,13 +107,13 @@ main {
     margin: 20px;
     cursor: pointer;
     pointer-events: auto;
-    border-radius: 10px; /* Adjusted border-radius for rounded corners */
+    border-radius: 10px; 
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .centered-box:hover {
-    background-color: #010c70; /* Change color on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+    background-color: #010c70; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
 

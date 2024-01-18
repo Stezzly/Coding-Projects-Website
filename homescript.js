@@ -28,7 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
             context.save();
             context.translate(this.x, this.y);
             context.rotate(this.rotationAngle);
-            context.drawImage(this.image, -this.radius, -this.radius, this.radius * 2, this.radius * 2);
+        
+            // Scale the image 
+            const scaleFactor = 0.3; 
+            const scaledWidth = this.image.width * scaleFactor;
+            const scaledHeight = this.image.height * scaleFactor;
+        
+            context.drawImage(
+                this.image,
+                -scaledWidth / 2,
+                -scaledHeight / 2,
+                scaledWidth,
+                scaledHeight
+            );
+        
             context.restore();
         };
 
@@ -56,11 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Function to create an array of gears based on screen size
+    // Odd columns will create uncentered array on horizontal
     function createGears() {
-        const numRows = 20;
-        const numCols = 20;
-        const paddingX = 50;
-        const paddingY = 50;
+        const numRows = 9;
+        const numCols = 10;
+        const paddingX = 60;
+        const paddingY = 60;
 
         const gearWidth = (window.innerWidth - paddingX) / numCols;
         const gearHeight = (window.innerHeight - paddingY) / numRows;
