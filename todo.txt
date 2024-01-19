@@ -1,5 +1,0 @@
-- add UI boxes for clicking on different categories: Web dev, App dev, Game dev, python, c, c+, ect
-- add current dev knowledge into each. Build upon over time 
-- will need to add other html pages to handle requesting and sending
-- create & add blender gear model for backround instead of BlueberryPie.ong
-- also add pages for each icon (laptop[home], book[readme/contact], settings[tools])
