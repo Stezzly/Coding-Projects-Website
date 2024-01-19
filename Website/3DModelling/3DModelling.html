@@ -23,19 +23,30 @@
         }
 
 
+       
         .grid-item {
-            background-color: #fff;
             border: 2px solid #ccc;
             padding: 100px; 
             text-align: center;
             width: 100%;
             transition: transform 0.2s; 
             box-sizing: border-box; 
+            background-color: #fff;
+            background-size: cover;  /* Ensures the background image covers the entire container */
+        }
+
+        /* Work In Progress! Does not work */
+        .grid-item.with-background {
+            background-image: url("/Website/Extra/GearForWebPNG.png");
         }
 
 
         .grid-item:hover {
             transform: scale(1.11); 
+        }
+
+        .grid-item:visited {
+            background-color: aqua;
         }
 
         .box-link {
@@ -44,6 +55,10 @@
             font-weight: bold;
             font-size: 1.2em;
         }
+        
+        .box-link:visited .grid-item {
+    background-color: #9c9c9c;
+        }      
     </style>
 </head>
 <body>
