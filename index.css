@@ -1,3 +1,11 @@
+
+main {
+    padding: 2rem; 
+    text-align: center;
+    position: relative;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -59,19 +67,13 @@ a.icon {
 .dark-mode-toggle {
     font-size: 2rem;
     cursor: pointer;
-    color: #a0a0a0;
+    color: #161616;
 }
 
 .dark-mode {
-    background-color: #282c35;
-    color: #ffffff; 
+    background-color: #666666;
 }
 
-main {
-    padding: 2rem; 
-    text-align: center;
-    position: relative;
-}
 
 .gears-container {
     position: relative;
@@ -87,33 +89,36 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
+    transform: translate(-60%, -50%); 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* Represents Two columns */
+    gap: 20px; 
+    width: 50%; 
 }
 
 
+
 .centered-box {
-    padding: 2em;
+    padding:75px;
+    margin: 30px;
     width:350px;
-    height: auto;
+    height: 200px;
+    line-height: 200px; /*Center Text inside box*/ 
+    text-align: center;
     background-color: #0092f3;
     color: #fff;
-    line-height: 200px;
-    margin: 10px;
     cursor: pointer;
     pointer-events: auto;
     border-radius: 10px; 
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    font-size: 24px;
+    border-style: ridge;
+    transition: transform 0.2s;
+    font-size: 36px;
 }
 
 .centered-box:hover {
     background-color: #010c70; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.11);
 }
 
 .centered-box:visited {

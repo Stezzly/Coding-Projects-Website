@@ -1,25 +1,45 @@
 
+
+/* Theme colors - background color background-color: #ffd000;
+
+
+/*Theme colors -  black, and yellow */
 body {
+    background-color: #1e68c9;
     margin: 0;
     padding: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    background-color: #1e68c9;
-    border-left: 5rem solid;
-    border-right: 5rem solid;
-    border-color: #323330;
+    border: 10px solid #323330;
+    border-style: ridge;
 }
 
 header {
-    background-color: #323330;
+    background-color: rgb(86, 81, 114);
     padding: 1rem;
     font-size: 2rem;
     color: #100147;
-    border: 10px solid #000000;
+    border: 10px solid rgba(128, 128, 128, 0.712);
     border-radius: 15px;
+    border-style: ridge;
     text-align: center;
-    margin-bottom: 0;
 }
+
+main{
+    width: 1500pxpx;
+    background-color: white;
+    border: 2px solid orange;
+    border-style:ridge;
+    padding: 20px;
+    margin: 20px;
+    
+}
+
+
+a{
+    color: #000000;
+}
+
 
 .header-container {
     display: flex;
@@ -72,20 +92,19 @@ a.icon {
 }
 
 .grid-item {
-    border: 2px solid #000000;
+    border: 10px solid rgba(128, 128, 128, 0.712);
     border-radius: 15px;
+    border-style: ridge;
     padding: 100px; 
     text-align: center;
     width: 100%;
     transition: transform 0.2s; 
     box-sizing: border-box; 
-    background-color: #fff;
+    color: black; /*Text color*/
+    background-color: rgb(0, 3, 158);
     background-size: cover;
-}
-
-/* Work In Progress! Does not work */
-.grid-item.with-background {
-    background-image: url("/Website/Extra/GearForWebPNG.png");
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 75px;
 }
 
 .grid-item:hover {
@@ -101,7 +120,19 @@ a.icon {
 }
 
 .box-link:visited .grid-item {
-    background-color: #9c9c9c;
+    background-color: rgb(0, 68, 255);
+    color: black; /* sets visited box text color*/
+}
+
+p{
+    background-color: blue;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #100147;
+    border: 10px solid #000000;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 
@@ -110,12 +141,17 @@ footer {
     padding: 1rem;
     font-size: 1.5rem;
     color: #100147;
-    border: 10px solid #000000;
+    border: 10px solid rgb(17, 0, 255);
     border-radius: 15px;
     text-align: center;
+    border-style: ridge;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 footer a{
     color: #1e68c9;
     text-decoration: underline;
+}
+footer:hover{
+    transform: scale(1.02); 
 }
