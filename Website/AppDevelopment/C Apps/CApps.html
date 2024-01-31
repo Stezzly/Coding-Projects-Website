@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Apps</title>
-    <link rel="stylesheet" href="/CSS Themes/JavaScriptThemeList.css">
+    <title>C Apps</title>
+    <link rel="stylesheet" href="/CSS Themes/CThemeList.css">
 </head>
 <header class="header-container">
     <div class="header-text">
-        <center><h1>JavaScript</h1>
+        <center><h1>C Apps</h1>
             <h3>Work in Progress!!!</h3></center>            
     </div>
 
@@ -20,9 +20,7 @@
     </div>       
 </header>
 <br>
-<main>
 <body>
-    
     <div class="grid-container">
         <!-- Box 1 -->
         <a href="#" class="box-link">
@@ -59,9 +57,17 @@
         <a href="/index.html">Have Fun Coders!</a>
     </footer>
     
+    <script>// Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     
+        // Add dark mode toggle button event listener
+        const darkModeToggleBtn = document.getElementById('darkModeToggleBtn');
+        if (darkModeToggleBtn) {
+            darkModeToggleBtn.addEventListener('click', toggleDarkMode);
+        }</script>
   
 </body>
-</main>
 
 </html>

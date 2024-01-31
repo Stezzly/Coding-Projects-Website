@@ -1,10 +1,10 @@
-html {
+
+body {
     margin: 0;
-    height: 100%;
-    padding: 1rem;
+    padding: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    background-color: rgb(255, 208, 0);
+    background-color: #ffd000;
     border-left: 5rem solid;
     border-right: 5rem solid;
     border-color: #0000cc;
@@ -29,6 +29,10 @@ header {
 .header-text {
     flex-grow: 1;
     margin-left: 111px;
+}
+
+a{
+    color: #000000;
 }
 
 .icons-container {
@@ -58,13 +62,52 @@ a.icon {
 .dark-mode-toggle {
     font-size: 2rem;
     cursor: pointer;
-    color: #a0a0a0;
+    color: #181818;
 }
 
 .dark-mode {
-    background-color: #282c35;
+    background-color: #d8b517;
     color: #ffffff;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    gap: 20px;  
+}
+
+.grid-item {
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 100px; 
+    text-align: center;
+    width: 100%;
+    transition: transform 0.2s; 
+    box-sizing: border-box; 
+    background-color: #fff;
+    background-size: cover;
+}
+
+/* Work In Progress! Does not work */
+.grid-item.with-background {
+    background-image: url("/Website/Extra/GearForWebPNG.png");
+}
+
+.grid-item:hover {
+    transform: scale(1.11); 
+}
+
+
+.box-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.box-link:visited .grid-item {
+    background-color: #9c9c9c;
+}
+
 
 footer {
     background-color: #0000cc;
@@ -74,5 +117,9 @@ footer {
     border: 10px solid #000000;
     border-radius: 15px;
     text-align: center;
-    margin-top: 0;
+}
+
+footer a{
+    color: #d8b517;
+    text-decoration: underline;
 }
