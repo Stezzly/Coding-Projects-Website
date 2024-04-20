@@ -1,152 +1,176 @@
-
-/*Theme colors -  black, and yellow */
+/* General styles */
 body {
-    background-color: rgb(255, 238, 0);
-    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Standardizing font-family */
+    background-color: #f7f7f7; /* Light grey background, neutral and professional */
+    color: #333;
+    line-height: 1.6;
     padding: 1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
     overflow-x: hidden;
-    border: 10px solid blue;
-    border-style: ridge;
 }
 
+/* Header styles */
 header {
-    background-color: rgb(86, 81, 114);
+    background-color: #306998; /* Deep blue, similar to Python logo */
+    color: #FFF; /* White text for contrast */
     padding: 1rem;
     font-size: 2rem;
-    color: #100147;
-    border: 10px solid rgba(128, 128, 128, 0.712);
+    border: 10px solid #ffe072; /* Yellow border */
     border-radius: 15px;
-    border-style: ridge;
     text-align: center;
 }
 
-main{
-    width: 1500pxpx;
-    background-color: white;
-    border: 2px solid orange;
-    border-style:ridge;
+/* Main section styles */
+main {
+    max-width: 95%; /* Responsive width */
+    background-color: #FFFFFF; /* White background for the main area */
+    border: 2px solid #306998; /* Border color as header background */
     padding: 20px;
-    margin: 20px;
-    
+    margin: 20px auto; /* Centering main content */
 }
 
-
-a{
-    color: #000000;
+/* Link styles */
+a {
+    color: #306998; /* Echoing deep blue from the header */
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
 
+/* Flex container for header items */
 .header-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.header-text {
-    flex-grow: 1;
-    margin-left: 111px;
-}
-
+/* Styling for icons */
 .icons-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-around; /* Distributes space around items evenly */
+    align-items: center;
+    width: 100%; /* Full width */
 }
 
 .icon {
-    margin: 1rem;
     font-size: 3rem;
     cursor: pointer;
     color: #abb2bf;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-a.icon {
-    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .icon:hover {
-    color: #19d800a6;
+    color: #ffe072; /* Yellow accent on hover */
     transform: scale(1.2);
 }
 
-.dark-mode-toggle {
-    font-size: 2rem;
-    cursor: pointer;
-    color: #a0a0a0;
-}
-
+/* Dark mode specific styles */
 .dark-mode {
-    background-color: #282c35;
-    color: #ffffff;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Two columns per row */
-    gap: 20px;  /* Adjust the gap between items as needed */
+    background: #282c35;
+    color: rgb(82, 82, 82);
 }
 
-.grid-item {
-    border: 10px solid rgba(128, 128, 128, 0.712);
-    border-radius: 15px;
-    border-style: ridge;
-    padding: 100px; 
-    text-align: center;
-    width: 100%;
-    transition: transform 0.2s; 
-    box-sizing: border-box; 
-    background-color: rgb(0, 68, 255);
-    background-size: cover;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 75px;
+/* Collapsible sections */
+.collapsible {
+    background-color: #4B8BBE; /* Lighter blue, complementary to the primary blue */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 5px;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.grid-item:hover {
-    transform: scale(1.11); 
+.collapsible:hover, .active {
+    background-color: #306998; /* Deeper blue for active/hover states */
 }
 
-
-.box-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 1.2em;
+/* Content inside collapsible sections */
+.content {
+    display: none;
+    background-color: #e9f5fb; /* Soft blue for content background */
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.box-link:visited .grid-item {
-    background-color: rgb(0, 68, 255);
-    color: black; /* sets visited box text color*/
+/* Progress bar and text */
+.progress-bar-container {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 20px;
+    position: relative;
+    margin: 20px 0;
 }
 
-p{
-    background-color: blue;
-    padding: 1rem;
-    font-size: 2rem;
-    color: #100147;
-    border: 10px solid #000000;
-    border-radius: 15px;
-    text-align: center;
-    margin-bottom: 0;
+.progress-bar {
+    background-color: #ffe072; /* Yellow progress bar */
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    transition: width 0.4s ease;
+    border-radius: 5px;
 }
 
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 500;
+}
 
+/* Footer styles */
 footer {
     background-color: #323330;
+    color: #ffe072; /* Yellow text to stand out on dark background */
     padding: 1rem;
     font-size: 1.5rem;
-    color: #100147;
-    border: 10px solid rgb(17, 0, 255);
-    border-radius: 15px;
     text-align: center;
-    border-style: ridge;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    border: 10px solid #ffe072; /* Yellow border */
+    border-radius: 15px;
+    margin-top: 20px; /* Added space above footer */
 }
 
-footer a{
-    color: #1e68c9;
-    text-decoration: underline;
+/* Rating and stars styling */
+.rating {
+    display: flex; /* Aligns stars horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px;
 }
-footer:hover{
-    transform: scale(1.02); 
+
+.star {
+    width: 24px;
+    height: 24px;
+    fill: #bbb; /* Default star color */
+}
+
+.star-filled {
+    fill: #ffe072; /* Gold color, matching the accent color */
+}
+
+.rating-tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.rating:hover .rating-tooltip {
+    visibility: visible;
+    opacity: 1;
 }
