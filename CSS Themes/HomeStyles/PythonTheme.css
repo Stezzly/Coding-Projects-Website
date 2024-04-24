@@ -2,6 +2,7 @@
 body {
     background-color: lightgray;
     margin: 0;
+    height: stretch;
     padding: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
@@ -185,6 +186,8 @@ footer a {
     box-sizing: border-box;
     background-color: #FFD43B;
     background-size: cover;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 75px;
 }
 
 .grid-item:hover {
@@ -193,8 +196,12 @@ footer a {
 
 
 
+
+
+
 .icon {
     margin: 1rem;
+    padding: 10px;
     font-size: 3rem;
     cursor: pointer;
     color: #abb2bf;
