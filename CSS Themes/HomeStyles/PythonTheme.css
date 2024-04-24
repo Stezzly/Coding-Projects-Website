@@ -24,11 +24,7 @@ p {
     margin-bottom: 0;
 }
 
-/* Hover Effects */
-a:hover, .collapsible:hover, .active {
-    text-decoration: underline;
-    background-color: #306998; /* Deeper blue for active/hover states */
-}
+
 
 /* Dark Mode Styles */
 .dark-mode {
@@ -183,6 +179,7 @@ footer a {
     border-style: ridge;
     padding: 100px;
     text-align: center;
+    font-size: 30pt;
     width: 100%;
     transition: transform 0.2s;
     box-sizing: border-box;
@@ -194,6 +191,8 @@ footer a {
     transform: scale(1.11);
 }
 
+
+
 .icon {
     margin: 1rem;
     font-size: 3rem;
@@ -201,6 +200,11 @@ footer a {
     color: #abb2bf;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
+a.icon {
+    text-decoration: none;
+}
+
 
 .icon:hover {
     color: #FFD43B;
