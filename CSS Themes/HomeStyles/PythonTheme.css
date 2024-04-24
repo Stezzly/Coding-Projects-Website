@@ -1,80 +1,93 @@
-/* General styles */
+/* Basic Element Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Standardizing font-family */
-    background-color: #f7f7f7; /* Light grey background, neutral and professional */
-    color: #333;
-    line-height: 1.6;
-    padding: 1em;
+    background-color: lightgray;
     margin: 0;
+    padding: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
+    border: 10px solid #FFD43B;
+    border-style: ridge;
 }
 
-/* Header styles */
-header {
-    background-color: #306998; /* Deep blue, similar to Python logo */
-    color: #FFF; /* White text for contrast */
+a {
+    color: #000000;
+}
+
+p {
+    background-color: #FFD43B;
     padding: 1rem;
     font-size: 2rem;
-    border: 10px solid #ffe072; /* Yellow border */
+    color: #100147;
+    border: 10px solid #000000;
     border-radius: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Hover Effects */
+a:hover, .collapsible:hover, .active {
+    text-decoration: underline;
+    background-color: #306998; /* Deeper blue for active/hover states */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #3c698ddc;
+}
+
+.dark-mode header {
+    background-color: #3c698ddc;
+    
+}
+
+.dark-mode main {
+    background-color: #3c698ddc;
+    
+}
+
+
+/* Header Styles */
+header {
+    background-color: #4B8BBE;
+    
+    padding: 1rem;
+    font-size: 2rem;
+    color: #100147;
+    border: 10px solid rgba(128, 128, 128, 0.712);
+    border-radius: 15px;
+    border-style: ridge;
     text-align: center;
 }
 
-/* Main section styles */
+/* Main Content Styles */
 main {
-    max-width: 95%; /* Responsive width */
-    background-color: #FFFFFF; /* White background for the main area */
-    border: 2px solid #306998; /* Border color as header background */
+    width: stretch;
+    background-color: #4B8BBE;
+    border: 10px solid rgba(128, 128, 128, 0.712);
+    border-style: ridge;
     padding: 20px;
-    margin: 20px auto; /* Centering main content */
+    margin: 20px;
 }
 
-/* Link styles */
-a {
-    color: #306998; /* Echoing deep blue from the header */
-    text-decoration: none;
+/* Footer Styles */
+footer {
+    background-color: #FFD43B;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #100147;
+    border: 10px solid #FFD43B;
+    border-radius: 15px;
+    text-align: center;
+    border-style: ridge;
 }
 
-a:hover {
+footer a {
     text-decoration: underline;
 }
 
-/* Flex container for header items */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Styling for icons */
-.icons-container {
-    display: flex;
-    justify-content: space-around; /* Distributes space around items evenly */
-    align-items: center;
-    width: 100%; /* Full width */
-}
-
-.icon {
-    font-size: 3rem;
-    cursor: pointer;
-    color: #abb2bf;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.icon:hover {
-    color: #ffe072; /* Yellow accent on hover */
-    transform: scale(1.2);
-}
-
-/* Dark mode specific styles */
-.dark-mode {
-    background: #282c35;
-    color: rgb(82, 82, 82);
-}
-
-/* Collapsible sections */
+/* Collapsible Sections */
 .collapsible {
-    background-color: #4B8BBE; /* Lighter blue, complementary to the primary blue */
+    background-color: #002646;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -85,92 +98,117 @@ a:hover {
     margin-bottom: 10px;
 }
 
-.collapsible:hover, .active {
-    background-color: #306998; /* Deeper blue for active/hover states */
-}
-
-/* Content inside collapsible sections */
 .content {
     display: none;
-    background-color: #e9f5fb; /* Soft blue for content background */
+    background-color: #e9f5fb;
     padding: 20px;
     border-radius: 5px;
 }
 
-/* Progress bar and text */
+/* Progress Bar Styles */
 .progress-bar-container {
     background-color: #ddd;
     border-radius: 5px;
-    height: 20px;
+    height: 40px;
     position: relative;
     margin: 20px 0;
 }
 
 .progress-bar {
-    background-color: #ffe072; /* Yellow progress bar */
+    background-color: #ffe072;
     width: 0%;
-    height: 100%;
+    height: 200%;
+    border: solid;
+    
     position: absolute;
     transition: width 0.4s ease;
     border-radius: 5px;
 }
 
 .progress-text {
-    position: absolute;
+    position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-size: 20pt;
+    font-weight: 600;
 }
 
-/* Footer styles */
-footer {
-    background-color: #323330;
-    color: #ffe072; /* Yellow text to stand out on dark background */
-    padding: 1rem;
-    font-size: 1.5rem;
-    text-align: center;
-    border: 10px solid #ffe072; /* Yellow border */
-    border-radius: 15px;
-    margin-top: 20px; /* Added space above footer */
-}
-
-/* Rating and stars styling */
+/* Rating and Stars Styling */
 .rating {
-    display: flex; /* Aligns stars horizontally */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-.star {
+.star, .star-filled {
     width: 24px;
     height: 24px;
-    fill: #bbb; /* Default star color */
 }
+
+.star {
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
+    fill: none;
+    stroke: black;
+}
+
 
 .star-filled {
-    fill: #ffe072; /* Gold color, matching the accent color */
+    fill: #ffe072;
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
+    stroke: black;
 }
 
-.rating-tooltip {
-    visibility: hidden;
-    background-color: black;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
+
 
 .rating:hover .rating-tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+/* Grid and Icon Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    border: 10px solid rgba(128, 128, 128, 0.712);
+    border-radius: 15px;
+    border-style: ridge;
+    padding: 100px;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+    background-color: #FFD43B;
+    background-size: cover;
+}
+
+.grid-item:hover {
+    transform: scale(1.11);
+}
+
+.icon {
+    margin: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #abb2bf;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: #FFD43B;
+    transform: scale(1.2);
+}
+
+.lightyellow-hr {
+    height: 10px; /* Thickness of the HR */
+    background-color: #FFD43B; /* Blue color */
+    border: none; /* Remove default border */
 }
