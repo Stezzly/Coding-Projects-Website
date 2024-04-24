@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blender Project 2 - The Gear</title>
+    <title>Blender Project 1 - The Gear</title>
     <link rel="stylesheet" href="/CSS Themes/HomeStyles/BasicTheme.css">
    
 </head>
@@ -11,7 +11,7 @@
 
 <header class="header-container">
     <div class="header-text">
-        <center><h1><i>Blender Project 2 - The Coffee Mug</i></h1></center>
+        <center><h1><i>Blender Project 1 - The Gear</i></h1></center>
     </div>
 
     
@@ -25,36 +25,36 @@
 </header>
 
 <main>
-    <h1>Welcome to Blender Project 2 - The Coffee Mug</h1>
-    <p>This project guides you through the steps to create a 3D model of a coffee mug using Blender. Perfect for beginners looking to get started with 3D modeling!</p>
+    <h1>Welcome to Blender Project 1 - Creating a Basic Gear</h1>
+    <p>This project will guide you through the process of creating a simple 3D model of a gear using Blender. It's designed for those who have a basic understanding of Blender's interface and 3D modeling concepts.</p>
 
     <h2>Hardware Setup</h2>
-    <p>In this section, we'll outline all the hardware components required for the project. This includes:</p>
+    <p>In this section, we outline the hardware components required for the project, ensuring a smooth modeling experience:</p>
     <ul>
         <li>A computer with at least 8 GB of RAM to ensure smooth operation.</li>
         <li>A graphics card with at least 2 GB of VRAM (4 GB or more recommended for optimal performance).</li>
-        <li>A mouse with a scroll wheel, which is very useful for navigating in 3D space.</li>
+        <li>A mouse with a scroll wheel, essential for navigating in 3D space.</li>
     </ul>
     
     <h2>Software Requirements</h2>
-    <p>Here, we'll detail all the software needed for the project, including:</p>
+    <p>Here are the software tools you'll need for the gear creation project:</p>
     <ul>
         <li>Blender: Latest version available for free from the official Blender Foundation website.</li>
-        <li>Graphics driver: Updated graphics driver compatible with your graphics card to handle rendering efficiently.</li>
-        <li>Optional: Add-ons for Blender such as Node Wrangler for advanced material work, though not required for this beginner project.</li>
+        <li>Graphics driver: Updated graphics driver compatible with your graphics card to handle 3D rendering.</li>
     </ul>
     
     <h2>Knowledge Prerequisites</h2>
-    <p>To successfully complete this project, it's recommended to have a basic understanding of the following:</p>
+    <p>To successfully complete this project, you should be familiar with the following concepts:</p>
     <ul>
-        <li>Basic computer skills: Comfort with operating systems (Windows, macOS, or Linux).</li>
-        <li>Understanding of 3D space and coordinates: Familiarity with how 3D space operates, including axes of x, y, and z.</li>
-        <li>Some familiarity with graphic design principles, such as shading, texture, and color basics.</li>
+        <li>Basic operations in Blender such as scaling, rotating, and moving objects.</li>
+        <li>Understanding of extrusion and basic 3D modeling techniques, including Boolean operations.</li>
     </ul>
     <br>
     
     <hr>
-</main>
+
+
+
 
 
 <h1>Difficulty Rating</h1>
@@ -97,99 +97,48 @@
 
 <button class="collapsible">Are you ready?</button>
 <div id="project-steps" style="display: none;">
-
-    <button class="collapsible">Step 1: Setting Up Your Project</button>
+    <h2><u>Project Steps:</u></h2>
+    <button class="collapsible">Step 1: Setting Up Your Blender Scene</button>
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
         <ol>
             <li>Open Blender and start a new project.</li>
-            <li>Delete the default cube by selecting it (right-click or left-click depending on your selection preference) and pressing Delete on your keyboard.</li>
+            <li>Delete the default cube by selecting it and pressing 'Delete'.</li>
         </ol>
     </div>
     <br>
 
-    <button class="collapsible">Step 2: Adding a Cylinder</button>
+    <button class="collapsible">Step 2: Creating the Base Shape</button>
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
         <ol>
-            <li>Press Shift + A to open the Add menu.</li>
-            <li>Select Mesh then Cylinder.</li>
-            <li>Set Vertices to 32, Radius to 1, Depth to 3, and Cap Fill Type to Ngon.</li>
+            <li>Press 'Shift + A' and select 'Mesh' -> 'Circle'. Choose to fill it with 'Ngon'.</li>
+            <li>Enter Edit Mode ('Tab'), select all vertices, press 'E' then 'S' to extrude and scale the circle slightly inward to form the basic thickness of the gear.</li>
         </ol>
     </div>
     <br>
 
-    <button class="collapsible">Step 3: Shaping the Mug</button>
+    <button class="collapsible">Step 3: Adding Teeth to the Gear</button>
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
         <ol>
-            <li>Switch to Edit Mode by pressing Tab.</li>
-            <li>With the entire cylinder selected, press S then Shift + Z and scale it on the X and Y axes only to make it wider.</li>
-            <li>To create the thickness of the mug walls, press I to inset the top face slightly.</li>
-            <li>Press E then Z to extrude the inset face down to create the inner wall of the mug, almost to the bottom of the cylinder.</li>
+            <li>Stay in Edit Mode. Use the Loop Cut tool ('Ctrl + R') to add multiple loop cuts around the circle. Slide them to space out where the gear teeth will be.</li>
+            <li>Select the faces where teeth will extrude. Use the extrude tool ('E') to pull these faces out, forming the teeth.</li>
         </ol>
     </div>
     <br>
 
-    <button class="collapsible">Step 4: Creating the Handle</button>
+    <button class="collapsible">Step 4: Refining the Teeth</button>
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
         <ol>
-            <li>Back in Object Mode (Tab to toggle), add another cylinder with Vertices: 12, Radius: 0.3, Depth: 3.</li>
-            <li>Rotate the new cylinder 90 degrees on the X-axis (R, X, 90, Enter).</li>
-            <li>Move it to the side of the mug and modify it into an oval shape by scaling it (S, then Y).</li>
-            <li>Position the oval where you'd like the handle to be.</li>
-            <li>Go to Edit Mode, select half of the vertices of the oval, and move them to form a more handle-like shape.</li>
-            <li>Attach the ends of the handle to the mug using Ctrl+J to join them into a single object, then manually merge the vertices using the Bridge tool or by merging vertices.</li>
+            <li>Adjust the shape of each tooth using the scale and move tools to refine their appearance.</li>
+            <li>Apply a Subdivision Surface modifier to smooth out the teeth and gear edges if desired.</li>
         </ol>
     </div>
     <br>
 
-    <button class="collapsible">Step 5: Applying a Material</button>
-    <div class="content">
-        <label><input type="checkbox" class="step-checkbox"> Done</label>
-        <ol>
-            <li>Go to the Material Properties tab (red sphere icon).</li>
-            <li>Click New to create a new material.</li>
-            <li>Set the Base Color to your preference.</li>
-            <li>Adjust other settings like Specular and Roughness to achieve the ceramic look.</li>
-        </ol>
-    </div>
-    <br>
-
-    <button class="collapsible">Step 6: Setting Up the Camera and Lights</button>
-    <div class="content">
-        <label><input type="checkbox" class="step-checkbox"> Done</label>
-        <ol>
-            <li>Position the camera to frame your mug appropriately. Select the camera, use G to move it, and R to rotate.</li>
-            <li>Add a light source from Shift + A > Light > Point or Area. Position it to illuminate the mug effectively.</li>
-            <li>Adjust light properties for intensity and color in the Light Properties tab.</li>
-        </ol>
-    </div>
-    <br>
-
-    <button class="collapsible">Step 7: Rendering Your Mug</button>
-    <div class="content">
-        <label><input type="checkbox" class="step-checkbox"> Done</label>
-        <ol>
-            <li>Go to the Render Properties panel.</li>
-            <li>Choose your Render Engine (Eevee for speed, Cycles for quality).</li>
-            <li>Press F12 to render your image.</li>
-        </ol>
-    </div>
-    <br>
-
-    <button class="collapsible">Step 8: Saving Your Work</button>
-    <div class="content">
-        <label><input type="checkbox" class="step-checkbox"> Done</label>
-        <ol>
-            <li>After rendering, go to Image > Save As in the render window to save your rendered image.</li>
-        </ol>
-    </div>
-    <br>
-
-</div>
-
+</main>
 
 
 <h2 class="conclusion">Congratulations you are now and are ready to head into the next section - Beginner - with confidence.</h2>
