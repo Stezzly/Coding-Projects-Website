@@ -3,12 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gear</title>
+    <title>Blender Project 2 - The Gear</title>
+    <link rel="stylesheet" href="/CSS Themes/HomeStyles/BasicTheme.css">
+   
 </head>
-<header>
-    <h1>The Gear</h1>
+<body class="light-mode">
+
+<header class="header-container">
+    <div class="header-text">
+        <center><h1><i>Blender Project 2 - The Coffee Mug</i></h1></center>
+    </div>
+
+    
+
+    <div class="icons-container">
+        <a href="index.html" class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</a> 
+        <a href="Website/Extra/AboutMe.html" class="icon" aria-label="Book icon" role="img">&#x1F4DA;</a> 
+        <a href="Website/Extra/Settings.html" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</a>
+        <span id="darkModeToggleBtn" class="icon dark-mode-toggle" aria-label="Dark Mode Toggle" role="img">🌙</span>
+    </div>
 </header>
-<body>
-    <model-viewer src = "/3DModels_Basic/gear/scene.gltf" alt="3D Gear Model" auto-rotate camera-controls></model-viewer>
+
+<main>
+    <h1>Welcome to Blender Project 2 - The Coffee Mug</h1>
+    <p>This project guides you through the steps to create a 3D model of a coffee mug using Blender. Perfect for beginners looking to get started with 3D modeling!</p>
+
+    <h2>Hardware Setup</h2>
+    <p>In this section, we'll outline all the hardware components required for the project. This includes:</p>
+    <ul>
+        <li>A computer with at least 8 GB of RAM to ensure smooth operation.</li>
+        <li>A graphics card with at least 2 GB of VRAM (4 GB or more recommended for optimal performance).</li>
+        <li>A mouse with a scroll wheel, which is very useful for navigating in 3D space.</li>
+    </ul>
+    
+    <h2>Software Requirements</h2>
+    <p>Here, we'll detail all the software needed for the project, including:</p>
+    <ul>
+        <li>Blender: Latest version available for free from the official Blender Foundation website.</li>
+        <li>Graphics driver: Updated graphics driver compatible with your graphics card to handle rendering efficiently.</li>
+        <li>Optional: Add-ons for Blender such as Node Wrangler for advanced material work, though not required for this beginner project.</li>
+    </ul>
+    
+    <h2>Knowledge Prerequisites</h2>
+    <p>To successfully complete this project, it's recommended to have a basic understanding of the following:</p>
+    <ul>
+        <li>Basic computer skills: Comfort with operating systems (Windows, macOS, or Linux).</li>
+        <li>Understanding of 3D space and coordinates: Familiarity with how 3D space operates, including axes of x, y, and z.</li>
+        <li>Some familiarity with graphic design principles, such as shading, texture, and color basics.</li>
+    </ul>
+    <br>
+    
+    <hr>
+</main>
+
+
+<h1>Difficulty Rating</h1>
+<div class="rating" aria-label="Project difficulty rating: 3.5 out of 5">
+    <!-- Dynamic star icons based on difficulty -->
+    <svg class="star star-filled" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="orange" stroke="black"/>
+    </svg>
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+</div>
+<center><h2>Very Easy Difficulty</h2></center>
+
+
+<br><br>
+
+
+
+
+
+
+<h1><center>Project Time!!!</center></h1>
+<div class="progress-bar-container">
+    <div class="progress-bar"></div>
+    <div class="progress-text">0%</div>
+</div>
+
+<br><br><br>
+
+<button class="collapsible">Are you ready?</button>
+<div id="project-steps" style="display: none;">
+
+    <button class="collapsible">Step 1: Setting Up Your Project</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>
+            <li>Open Blender and start a new project.</li>
+            <li>Delete the default cube by selecting it (right-click or left-click depending on your selection preference) and pressing Delete on your keyboard.</li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 2: Adding a Cylinder</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>
+            <li>Press Shift + A to open the Add menu.</li>
+            <li>Select Mesh then Cylinder.</li>
+            <li>Set Vertices to 32, Radius to 1, Depth to 3, and Cap Fill Type to Ngon.</li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 3: Shaping the Mug</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>
+            <li>Switch to Edit Mode by pressing Tab.</li>
+            <li>With the entire cylinder selected, press S then Shift + Z and scale it on the X and Y axes only to make it wider.</li>
+            <li>To create the thickness of the mug walls, press I to inset the top face slightly.</li>
+            <li>Press E then Z to extrude the inset face down to create the inner wall of the mug, almost to the bottom of the cylinder.</li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 4: Creating the Handle</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>
+            <li>Back in Object Mode (Tab to toggle), add another cylinder with Vertices: 12, Radius: 0.3, Depth: 3.</li>
+            <li>Rotate the new cylinder 90 degrees on the X-axis (R, X, 90, Enter).</li>
+            <li>Move it to the side of the mug and modify it into an oval shape by scaling it (S, then Y).</li>
+            <li>Position the oval where you'd like the handle to be.</li>
+            <li>Go to Edit Mode, select half of the vertices of the oval, and move them to form a more handle-like shape.</li>
+            <li>Attach the ends of the handle to the mug using Ctrl+J to join them into a single object, then manually merge the vertices using the Bridge tool or by merging vertices.</li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 5: Applying a Material</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>
+            <li>Go to the Material Properties tab (red sphere icon).</li>
+            <li>Click New to create a new material.</li>
+            <li>Set the Base Color to your preference.</li>
+            <li>Adjust other settings like Specular and Roughness to achieve the ceramic look.</li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 6: Setting Up the Camera and Lights</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>
+            <li>Position the camera to frame your mug appropriately. Select the camera, use G to move it, and R to rotate.</li>
+            <li>Add a light source from Shift + A > Light > Point or Area. Position it to illuminate the mug effectively.</li>
+            <li>Adjust light properties for intensity and color in the Light Properties tab.</li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 7: Rendering Your Mug</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>
+            <li>Go to the Render Properties panel.</li>
+            <li>Choose your Render Engine (Eevee for speed, Cycles for quality).</li>
+            <li>Press F12 to render your image.</li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 8: Saving Your Work</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>
+            <li>After rendering, go to Image > Save As in the render window to save your rendered image.</li>
+        </ol>
+    </div>
+    <br>
+
+</div>
+
+
+
+<h2 class="conclusion">Congratulations you are now and are ready to head into the next section - Beginner - with confidence.</h2>
+
+</button>
+
+
+<footer>
+    <a href="/index.html">Have Fun Coders!</a>
+</footer>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var readyButton = document.querySelector('.collapsible');
+        var projectSteps = document.getElementById('project-steps');
+    
+        readyButton.addEventListener('click', function() {
+            projectSteps.style.display = projectSteps.style.display === 'block' ? 'none' : 'block';
+        });
+    
+        var coll = document.querySelectorAll('#project-steps .collapsible');
+        coll.forEach(function(collapsible) {
+            collapsible.addEventListener('click', function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+    
+        var checkboxes = document.querySelectorAll('#project-steps .step-checkbox');
+        var progressBar = document.querySelector('.progress-bar');
+        var progressText = document.querySelector('.progress-text');
+        var totalSteps = checkboxes.length;
+        var completedSteps = 0;
+    
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    completedSteps++;
+                } else {
+                    completedSteps--;
+                }
+    
+                var progressPercentage = (completedSteps / totalSteps) * 100;
+                progressBar.style.width = progressPercentage + '%';
+                progressText.textContent = Math.round(progressPercentage) + '%';
+    
+                var conclusion = document.querySelector('.conclusion');
+                if (completedSteps === totalSteps) {
+                    conclusion.style.display = 'block';
+                } else {
+                    conclusion.style.display = 'none';
+                }
+            });
+        });
+    
+        // Function to toggle dark mode
+        var toggleDarkMode = function() {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        };
+    
+        // Add event listener for dark mode toggle
+        var darkModeToggleBtn = document.getElementById('darkModeToggleBtn');
+        darkModeToggleBtn.addEventListener('click', toggleDarkMode);
+    });
+    </script>
+
+
 </body>
 </html>
