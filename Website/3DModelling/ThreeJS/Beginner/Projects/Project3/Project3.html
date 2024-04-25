@@ -3,284 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <title>Advanced 3D Model Viewer</title>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #f0f0f0;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            margin: 0;
-        }
-
-        /* Enhanced Typography for Clear Hierarchy */
-        h1, h2 {
-            font-weight: 700;
-            color: #0056b3;
-        }
-
-        /* Updated Collapsible Button Style */
-        .collapsible {
-            background-color: #007bff;
-            color: #ffffff;
-            cursor: pointer;
-            padding: 18px;
-            width: calc(100% - 36px);
-            border-radius: 5px;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 18px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .active, .collapsible:hover {
-            background-color: #0056b3;
-        }
-
-        /* Content Style */
-        .content {
-            padding: 20px;
-            display: none;
-            background-color: #e9f5fb;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        /* Progress Bar and Text Enhancements */
-        .progress-bar-container {
-            background-color: #ddd;
-            border-radius: 5px;
-            height: 20px;
-            position: relative;
-            margin: 20px 0;
-        }
-
-        .progress-bar {
-            background-color: #4CAF50;
-            height: 100%;
-            width: 0%;
-            position: absolute;
-            transition: width 0.4s ease;
-            border-radius: 5px;
-        }
-
-        .progress-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-weight: 500;
-        }
-
-        /* Custom List Style */
-        ul li::before {
-            content: '▹';
-            color: #007bff;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        /* Custom Link Style */
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Conclusion Section Style */
-        .conclusion {
-            background-color: #e9f5fb;
-            padding: 20px;
-            border-radius: 5px;
-            display: none;
-        }
-        .rating {
-            display: inline-block;
-        }
-
-        .star {
-            width: 24px;
-            height: 24px;
-            fill: #bbb;
-        }
-
-        .star-filled {
-            fill: #ffc107; /* Gold color for filled stars */
-        }
-
-        .rating-tooltip {
-            visibility: hidden;
-            width: 120px;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -60px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .rating:hover .rating-tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
+        body { margin: 0; }
+        canvas { display: block; }
     </style>
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/loaders/RGBELoader.js"></script>
+    <script>
+        let scene, camera, renderer, loader, controls;
 
+        function init() {
+            // Scene setup
+            scene = new THREE.Scene();
 
-<h1>Project Title</h1>
+            // Camera setup
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 5;
 
-<h2>Introduction</h2>
-<p>Welcome to the project showcase page for [Your Project Title]. In this section, we'll provide an overview of the project, its objectives, and what you can expect to learn from it.</p>
+            // Renderer setup
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.toneMappingExposure = 1.0;
+            document.body.appendChild(renderer.domElement);
 
-<h2>Objective</h2>
-<p>The main goal of this project is to [state the main objective or problem you aim to solve].</p>
+            // HDR Environment
+            const pmremGenerator = new THREE.PMREMGenerator(renderer);
+            pmremGenerator.compileEquirectangularShader();
+            new THREE.RGBELoader()
+                .setDataType(THREE.UnsignedByteType)
+                .load('path_to_your_hdr_image.hdr', function(texture) {
+                    const envMap = pmremGenerator.fromEquirectangular(texture).texture;
+                    scene.background = envMap;
+                    scene.environment = envMap;
+                    texture.dispose();
+                    pmremGenerator.dispose();
+                });
 
-<h2>Hypothesis</h2>
-<p>Based on [background research/knowledge], we hypothesize that [state your hypothesis].</p>
+            // Lighting setup
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+            scene.add(ambientLight);
 
-<h2>Hardware Setup</h2>
-<p>In this section, we'll outline all the hardware components required for the project. This includes:</p>
-<ul>
-    <li>Hardware Component 1</li>
-    <li>Hardware Component 2</li>
-    <!-- Add more components as necessary -->
-</ul>
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(0.5, 0, 0.866); // Adjusted for better illumination
+            scene.add(directionalLight);
 
-<h2>Software Requirements</h2>
-<p>Here, we'll detail all the software needed for the project, including:</p>
-<ul>
-    <li><img src="software_icon.png" alt="Software Icon" style="vertical-align: middle; width: 20px;"> Software 1</li>
-    <li><img src="software_icon.png" alt="Software Icon" style="vertical-align: middle; width: 20px;"> Software 2</li>
-    <!-- Add more software as necessary -->
-</ul>
-
-<h2>Knowledge Prerequisites</h2>
-<p>To successfully complete this project, it's recommended to have a basic understanding of [list any relevant concepts or technologies].</p>
-
-<h2>Difficulty Rating</h2>
-<div class="rating" aria-label="Project difficulty rating: 3 out of 5">
-    <!-- Dynamic star icons based on difficulty -->
-    <svg class="star star-filled" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <svg class="star" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <svg class="star" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <svg class="star" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <svg class="star" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <span class="rating-tooltip">Easy Difficulty</span>
-</div>
-<br><br>
-
-
-<h1><center>Project Time!!!</center></h1>
-<div class="progress-bar-container">
-    <div class="progress-bar"></div>
-    <div class="progress-text">0%</div>
-</div>
-
-<button class="collapsible">Are you ready?</button>
-<div id="project-steps" style="display: none;">
-    <button class="collapsible">Step 1: Brief description of the first step</button>
-    <div class="content">
-        <label><input type="checkbox" class="step-checkbox"> Done</label>
-        <p>Detailed instructions for Step 1.</p>
-        <p>Code snippets, if applicable, can be included here.</p>
-    </div>
-    <button class="collapsible">Step 2: Brief description of the second step</button>
-    <div class="content">
-        <label><input type="checkbox" class="step-checkbox"> Done</label>
-        <p>Detailed instructions for Step 2.</p>
-        <p>Code snippets, if applicable, can be included here.</p>
-    </div>
-</div>
-
-
-<h2 class="conclusion">Conclusion</h2>
-<p class="conclusion">Congratulations! You've completed the [Your Project Title] project. In this section, we'll summarize what you've achieved and provide next steps or potential areas for further exploration.</p>
-</button>
-
-
-<h2>Additional Resources</h2>
-<ul>
-    <li><a href="#">Link to relevant tutorials</a></li>
-    <li><a href="#">Link to documentation</a></li>
-    <!-- Add more links as necessary -->
-</ul>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Initialize the "Are you ready?" collapsible
-        var readyButton = document.querySelector('.collapsible'); // Assuming it's the first button
-        var projectSteps = document.getElementById('project-steps');
-    
-        readyButton.addEventListener('click', function() {
-            // Toggle visibility of project steps
-            projectSteps.style.display = projectSteps.style.display === 'block' ? 'none' : 'block';
-            // Prevent further toggling by removing this event listener
-            this.removeEventListener('click', arguments.callee);
-        });
-    
-        // Initialize other collapsible controls and progress tracking within the project steps div
-        initializeCollapsiblesAndProgressTracking();
-    });
-    
-    function initializeCollapsiblesAndProgressTracking() {
-        // Script for other collapsible sections within the project steps
-        var coll = document.querySelectorAll('#project-steps .collapsible');
-        coll.forEach(function(collapsible) {
-            collapsible.addEventListener('click', function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                content.style.display = content.style.display === "block" ? "none" : "block";
+            // Load GLTF model
+            loader = new THREE.GLTFLoader();
+            loader.load('/Website/3DModelling/GLB Files/katana_with_dragon.glb', function(gltf) {
+                scene.add(gltf.scene);
+                updateCameraPosition(gltf.scene);
+            }, undefined, function(error) {
+                console.error('An error happened:', error);
             });
-        });
-    
-        // Script for progress tracking
-        var checkboxes = document.querySelectorAll('#project-steps .step-checkbox');
-        var progressBar = document.querySelector('.progress-bar');
-        var progressText = document.querySelector('.progress-text');
-        var totalSteps = checkboxes.length;
-        var completedSteps = 0;
-    
-        checkboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    completedSteps++;
-                } else {
-                    completedSteps--;
-                }
-    
-                var progressPercentage = (completedSteps / totalSteps) * 100;
-                progressBar.style.width = progressPercentage + '%';
-                progressText.textContent = Math.round(progressPercentage) + '%';
-    
-                var conclusion = document.querySelector('.conclusion');
-                if (completedSteps === totalSteps) {
-                    conclusion.style.display = 'block';
-                } else {
-                    conclusion.style.display = 'none';
-                }
-            });
-        });
-    }
+
+            // Controls for model interaction
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.1;
+            controls.minDistance = 2;
+            controls.maxDistance = 10;
+
+            // Window resize handler
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        function updateCameraPosition(model) {
+            const box = new THREE.Box3().setFromObject(model);
+            const center = box.getCenter(new THREE.Vector3());
+            const size = box.getSize(new THREE.Vector3());
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const fov = camera.fov * (Math.PI / 180);
+            let cameraZ = maxDim / 2 / Math.tan(fov / 2);
+            cameraZ *= 2; // Double it for good measure
+            camera.position.z = cameraZ;
+            controls.target = center;
+            controls.update();
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        init();
+        animate();
     </script>
-    
 </body>
 </html>
