@@ -3,10 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction To 3D</title>
+    <title>Blender Introduction</title>
+  
+    <link rel="stylesheet" href="/CSS Themes/HomeStyles/BasicTheme.css">
 </head>
-<body>
-    <h1>Introduction To 3D</h1>
+<body class="light-mode">
+
+<header class="header-container">
+    <div class="header-text">
+        <center><h1><i>Blender Introduction</i></h1></center>
+    </div>
+    <div class="icons-container">
+        <a href="index.html" class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</a> 
+        <a href="Website/Extra/AboutMe.html" class="icon" aria-label="Book icon" role="img">&#x1F4DA;</a> 
+        <a href="Website/Extra/Settings.html" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</a>
+        <span id="darkModeToggleBtn" class="icon dark-mode-toggle" aria-label="Dark Mode Toggle" role="img">🌙</span>
+    </div>
+</header>
+
+<main>
+    <h1>Welcome to Blender!</h1>
+    <p>This will be a straightforward introduction for those who are new to 3D modeling, animation, and rendering.
+        <br>This section is focused on Blender, a powerful, versatile, and free 3D creation suite.
+        <br>It will give you all the basics to get Blender set up on your computer.
+        <br><br>In simple terms, we need a system capable of handling Blender's requirements, along with familiarizing yourself with its interface and primary functions.
+        By the end of this introduction, you will have installed Blender and created your first simple 3D model.</p>
+
+    <h2>Hardware Setup</h2>
+    <p>In this section, we'll outline all the hardware components required for using Blender effectively. This includes:</p>
+    <ul>
+        <li>Processor: Multi-core CPU (64-bit), 8 threads or more recommended.</li>
+        <li>Memory: Minimum 8 GB RAM, 16 GB or more recommended for heavy tasks.</li>
+        <li>Graphics Card: OpenGL 3.3 compatible with at least 2 GB RAM.</li>
+        <li>Storage: SSD with at least 20 GB of free space.</li>
+    </ul>
     
+    <h2>Software Requirements</h2>
+    <p>Here, we'll detail all the software needed for using Blender:</p>
+    <ul>
+        <li>Operating System of your choice (Windows 10 or later, macOS 10.13 High Sierra or later, or a compatible Linux distribution).</li>
+        <li>Blender: Download the latest Blender release from the official Blender website.</li>
+    </ul>
+    
+    <h2>Knowledge Prerequisites</h2>
+    <p>To successfully use Blender, it's recommended to have a basic understanding of the following:</p>
+    <ul>
+        <li>3D Modeling Concepts: Familiarity with basic 3D modeling terms and techniques.</li>
+        <li>Computer Graphics: Understanding basic concepts like lighting, texturing, and rendering.</li>
+    </ul>
+    <br>
+
+<hr>
+
+<h1>Difficulty Rating</h1>
+<div class="rating" aria-label="Project difficulty rating: 3.5 out of 5">
+    <!-- Dynamic star icons based on difficulty -->
+    <svg class="star half-filled" viewBox="0 0 24 24">
+        <!-- Gradient definition -->
+        <defs>
+            <linearGradient id="half-fill-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="50%" style="stop-color:orange; stop-opacity:1" />
+                <stop offset="50%" style="stop-color:lightgray; stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <!-- Star shape using the gradient -->
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"
+                 fill="url(#half-fill-gradient)" stroke="black"/>
+    </svg>    
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+</div>
+
+<center><h2>Very Easy Difficulty</h2></center>
+
+<br><br>
+
+<h1><center>Project Time!!!</center></h1>
+<div class="progress-bar-container">
+    <div class="progress-bar"></div>
+    <div class="progress-text">0%</div>
+</div>
+
+<br><br><br>
+
+<button class="collapsible">Are you ready?</button>
+<div id="project-steps" style="display: none;">
+    <button class="collapsible">Step 1: Download Blender</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>Visit the official Blender website at <a href="https://www.blender.org/download/" target="_blank">blender.org/download</a> to download the latest version for your operating system.</p>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 2: Install Blender</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>Follow the installation instructions on the website. Ensure your system meets the minimum requirements.</p>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 3: Create Your First Model</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>Open Blender and follow a tutorial to create your first simple 3D model. Tutorials can be found on Blender's official website or YouTube.</p>
+    </div>
+</div>
+
+<h2 class="conclusion">Congratulations! You are now ready to explore further into the Blender world and enhance your 3D modeling skills.</h2>
+</button>
+
+<h2>Additional Resources</h2>
+<ul>
+    <li><a href="https://www.blender.org/tutorial/">Link to tutorials</a></li>
+    <li><a href="https://www.blender.org/download/">Link to downloads</a></li>
+    <!-- Add more links as necessary -->
+</ul>
+
+<footer>
+    <a href="/index.html">Have Fun Modelers!</a>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var readyButton = document.querySelector('.collapsible');
+        var projectSteps = document.getElementById('project-steps');
+    
+        readyButton.addEventListener('click', function() {
+            projectSteps.style.display = projectSteps.style.display === 'block' ? 'none' : 'block';
+        });
+    
+        var coll = document.querySelectorAll('#project-steps .collapsible');
+        coll.forEach(function(collapsible) {
+            collapsible.addEventListener('click', function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+    
+        var checkboxes = document.querySelectorAll('#project-steps .step-checkbox');
+        var progressBar = document.querySelector('.progress-bar');
+        var progressText = document.querySelector('.progress-text');
+        var totalSteps = checkboxes.length;
+        var completedSteps = 0;
+    
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    completedSteps++;
+                } else {
+                    completedSteps--;
+                }
+    
+                var progressPercentage = (completedSteps / totalSteps) * 100;
+                progressBar.style.width = progressPercentage + '%';
+                progressText.textContent = Math.round(progressPercentage) + '%';
+    
+                var conclusion = document.querySelector('.conclusion');
+                if (completedSteps === totalSteps) {
+                    conclusion.style.display = 'block';
+                } else {
+                    conclusion.style.display = 'none';
+                }
+            });
+        });
+    
+        var toggleDarkMode = function() {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        };
+    
+        var darkModeToggleBtn = document.getElementById('darkModeToggleBtn');
+        darkModeToggleBtn.addEventListener('click', toggleDarkMode);
+    });
+</script>
+
 </body>
 </html>
