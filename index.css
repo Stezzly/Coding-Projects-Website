@@ -145,46 +145,47 @@ a.icon {
 
 @media (max-width: 768px) {
     body, html {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* Prevent horizontal scroll */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     .header-container,
-    .header-text {
-        width: 100%; /* Ensure header text container is full width */
-    }
-
-    .intro {
-        width: 100%; /* Stretch 'Hello World' text container to full width */
-        padding: 0 15px; /* Add padding on smaller screens */
-        box-sizing: border-box; /* Include padding in width calculation */
+    .header-text,
+    .intro,
+    .grid-container,
+    .center-container,
+    footer {
+        width: 100%; /* Full width */
+        margin: 0; /* No horizontal margins */
+        padding: 0; /* No horizontal padding */
+        box-sizing: border-box; /* Include padding and border in width */
     }
 
     .grid-container {
-        grid-template-columns: 1fr; /* Stack boxes vertically */
-        padding: 0 15px; /* Add padding on smaller screens */
-        box-sizing: border-box; /* Include padding in width calculation */
+        display: flex; /* Use flexbox instead of grid */
+        flex-direction: column; /* Stack children vertically */
+        gap: 15px; /* Space between items */
+        align-items: center; /* Center items horizontally */
     }
 
-    .box, .box-stretch {
-        margin: 10px auto; /* Center boxes with automatic horizontal margins */
-        padding: 20px; /* Adjust padding for smaller screens */
-        width: auto; /* Allow width to adjust based on the padding and content */
-        max-width: none; /* Remove max-width constraints */
+    .box {
+        width: 90%; /* Take up most of the viewport width */
+        margin: 10px 0; /* Only vertical margins */
+    }
+
+    .box-stretch {
+        width: 90%; /* Match other boxes */
+        margin: 15px 0; /* Slightly more vertical margin */
+        order: -1; /* Place 'Other' at the top */
     }
 
     #gears {
-        width: 100vw; /* Stretch canvas to viewport width */
-        height: auto; /* Adjust height automatically */
-        position: relative; /* Adjust position */
-        top: 0; /* Reset any previously set positioning */
-        left: 0; /* Reset any previously set positioning */
+        width: 100vw; /* Set to the viewport width */
+        height: auto; /* Maintain aspect ratio */
+        position: relative; /* Position relative to the viewport */
     }
 
     footer {
-        position: relative; /* Prevent footer from sticking to the bottom */
-        width: 100%; /* Ensure footer is full width */
+        position: relative; /* Ensure it's not fixed to allow natural flow */
     }
 }
 
