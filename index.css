@@ -110,8 +110,8 @@ a.icon {
 .box {
     padding:75px;
     margin: 35px;
-    width:220px;
-    height: 100px;
+    width:50%;
+    height: 33%;
     line-height: 100px; /*Center Text inside box*/ 
     text-align: center;
     background-color: #0092f3;
@@ -128,7 +128,7 @@ a.icon {
     justify-content: center;
     padding: 0px;
     margin: 0px ; /* Vertically spaced, centered horizontally */
-    width: 1700px;
+    width: 100%;
 }
 
 .box:hover {
@@ -143,30 +143,31 @@ a.icon {
 }
 
 
-/* Mobile styles */
 @media (max-width: 768px) {
-    .grid-container {
-      grid-template-columns: 1fr; /* Stack boxes on top of each other */
+    body {
+        overflow-x: hidden; /* Prevent horizontal scroll */
     }
-  
-    .box, .box-stretch {
-      padding: 20px; /* Adjust padding for smaller screens */
-      margin: 10px; /* Adjust margin for smaller screens */
-      width: calc(100% - 20px); /* Adjust width to be full-width minus margin */
-      font-size: 24px; /* Adjust font size for smaller screens */
-    }
-  
+
+    .header-container,
+    .overlay-container,
+    .grid-container,
     .center-container {
-      flex-direction: column; /* Stack center container content */
+        width: 100%; /* Ensure full width */
+        box-sizing: border-box; /* Include padding and border in the element's total width */
     }
-  }
-  
-  /* This is to ensure the header text scales well on smaller screens */
-  .header-text {
-    margin-left: 0; /* Remove the dirty hack margin */
-    text-align: center;
-  }
-  
+
+    .box,
+    .box-stretch {
+        width: auto; /* Allow boxes to fit the container width */
+        max-width: none; /* Remove any max-width restrictions */
+        margin: 10px; /* Adjust margin to ensure it does not cause overflow */
+        padding: 20px; /* Adjust padding to ensure it does not cause overflow */
+    }
+
+    .box-stretch {
+        width: calc(100% - 20px); /* Adjust width to be full-width minus margin */
+    }
+}
 
 
 
