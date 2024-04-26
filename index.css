@@ -84,15 +84,26 @@ a.icon {
 
 .overlay-container {
     position: absolute;
-  
     pointer-events: none; /* Clicks pass through to the canvas */
 }
+
 .grid-container {
     display: grid; 
     grid-template-columns: repeat(4, 1fr); /* Represents Two columns */
     gap: 20px; 
-    width: 50%; 
+    width: 100%; 
+     /* border: solid black 5px; *- for visualization purposes*/
 }
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: solid black 5px; - for visualization purposes*/
+}
+
+
 
 
 
@@ -111,6 +122,13 @@ a.icon {
     border-style: ridge;
     transition: transform 0.2s;
     font-size: 36px;
+}
+
+.box-stretch {
+    justify-content: center;
+    padding: 0px;
+    margin: 0px ; /* Vertically spaced, centered horizontally */
+    width: 1700px;
 }
 
 .box:hover {
