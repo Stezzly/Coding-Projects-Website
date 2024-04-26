@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Development - Project 1</title>
+    <link rel="stylesheet" href="/CSS Themes/HomeStyles/BasicTheme.css">
+   
+</head>
+<body class="light-mode">
+
+<header class="header-container">
+    <div class="header-text">
+        <center><h1><i>App Development - Project 1</i></h1></center>
+    </div>
+
+    
+
+    <div class="icons-container">
+        <a href="index.html" class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</a> 
+        <a href="Website/Extra/AboutMe.html" class="icon" aria-label="Book icon" role="img">&#x1F4DA;</a> 
+        <a href="Website/Extra/Settings.html" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</a>
+        <span id="darkModeToggleBtn" class="icon dark-mode-toggle" aria-label="Dark Mode Toggle" role="img">🌙</span>
+    </div>
+</header>
+
+<main>
+<main>
+    <h1>Project 1 - GitHub Stats GUI</h1>
+    <p>This guide is a straightforward introduction to creating a GitHub Stats GUI for those new to the concept. <br>
+        <br>Although could be argued we are not technically creating/coding an application from scratch, we are technically still creating and deploying an application! <br>
+        <br>From creating our personal key to access API to then deploying our product on our Github, there's no shortage of development, and we will indeed be left with a final ReadME statistics application which will constantly run and display our GitHub Stats!  <br>
+        <br>This section focuses on how to use GitHub's APIs to fetch and display your coding activity statistics dynamically on your GitHub profile. <br>
+        <br>It will guide you through setting up a visualization of your GitHub statistics, enhancing the visual appeal of your GitHub profile. 
+        <br> <br>In simple terms, we need a setup to visually represent our GitHub activity, showcasing various statistics such as commits, pull requests, and most used languages. 
+        By the end of this introduction, you will have a dynamic GitHub Stats GUI displayed on your profile.
+
+        <h2>Software Setup</h2>
+        <p>In this section, we'll outline all the software components required for the project. This includes:</p>
+        <ul>
+            <li>GitHub Account: Ensure you have a GitHub account where you can modify your profile README.</li>
+            <li>Text Editor: Any modern text editor like VS Code, Atom, or Sublime Text for editing your README file.</li>
+            <li>Markdown Knowledge: Basic understanding of Markdown used to format README files.</li>
+        </ul>
+    
+        
+        <h2>Knowledge Prerequisites</h2>
+        <p>To successfully complete this project, it's recommended to have a basic understanding of the following:</p>
+        <ul>
+            <li>Using GitHub: Ability to navigate through GitHub and understand its basic functionalities.</li>
+            <li>Markdown Editing: Familiarity with Markdown for editing README files on GitHub.</li>
+            <li>Understanding API Usage: Basic knowledge of how APIs work to fetch data dynamically (optional but helpful).</li>
+        </ul>
+        <br>
+</main>
+
+
+<hr class="lightyellow-hr">
+
+
+<h1>Difficulty Rating</h1>
+<div class="rating" aria-label="Project difficulty rating: 3.5 out of 5">
+    <!-- Dynamic star icons based on difficulty -->
+    <svg class="star star-filled" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="orange" stroke="black"/>
+    </svg>
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+    
+    <svg class="star" viewBox="0 0 24 24">
+        <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+    </svg>
+</div>
+<center><h2>Very Easy Difficulty</h2></center>
+
+
+<br><br>
+
+
+
+
+
+
+<h1><center>Project Time!!!</center></h1>
+<div class="progress-bar-container">
+    <div class="progress-bar"></div>
+    <div class="progress-text">0%</div>
+</div>
+
+<br><br><br>
+
+<button class="collapsible">Are you ready?</button>
+<div id="project-steps" style="display: none;">
+
+    <button class="collapsible">Step 1: Setup Your GitHub Profile README</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>Ensure you have a repository named after your username on GitHub. Inside, create a README.md file that will be visible on your GitHub profile.</p>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 2: Integrate GitHub Stats</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>Visit the [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) <a href="https://github.com/anuraghazra/github-readme-stats">repository</a>. <br>
+            Simply change the value assigned to ?username which we have convieniently underlined to your username:
+            <br><br> <code>[![Stezzly's GitHub stats](https://github-readme-stats.vercel.app/api?username=<u><i>Stezzly</u></i>)](https://github.com/anuraghazra/github-readme-stats)</code>. 
+            <br><br> Then paste this code into your README.md just created.
+            <br><br> Voila! You have successfully added a GitHub stats display! But why are the stats so bad? Well, this could be because either you simply have bad stats, or your private stats are not showing
+            <br><br> This is where we must integrate API </p>            
+    </div>
+
+
+    <br>
+
+    <button class="collapsible">Step 3: Connect through API and Deploy on Vercel</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>To display our private statistics we much connect our account through API so that our personal information can be accesed.
+            Dont worry, we will still be deploying ourself on a trusted platform called <a href="">Vercel</a> 
+        <br><br>Vercel is a wonderful tool which we will be using to host and deploy our own Web application. Earlier when we seen our GitHub Stats GUI it was being generated from another 
+        host that someone else deployed. Even though it displayed our statistics, we were not the ones actually creating the statisical or visual generation. Rather, we were stealing both
+        code and processing power from the wonderful anuraghazra.
+        <br><br> We will still continue to steal code... but we will step up our own server on Vercel to then run this code.
+        <br><br> <a href="https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#deploy-on-your-own">Here</a>, you can find a wonderful guide by anuraghazra. Simply click the 🛠️ Step-by-step guide on setting up your own Vercel instance
+        drop down, and follow along step by step. Once you are complete, return here as the following steps to complete the project on anuraghazra's github are vaugue.
+    </p>
+    <p>First, we want to check that our server has successfully deployed. We can go back over to Vercel and check the our github-readme-stats project which we have created. The status should show ready. If not, you must go back and properly redeploy the project
+        <br><br> If the project is ready, then it means then you are good to go. Now we simply just need to replace the server link to be our own.
+        <br><br> To do this we need to get our link from our deployed project on Vercel. If we go back over to our project where we verified the ready status earlier, we can see there is also a Domains section which lists a url.
+        <br><br> This is the URL we will be using to connect to our newly deployed server
+        <br><br> Simply take the code we had in our ReadME.md eariler and replace the underlined with your server domain URL: <code>[![Stezzly's GitHub stats](<u>https://github-readme-stats-khaki-kappa.vercel.app</u>/api?username=Stezzly)](https://github.com/anuraghazra/github-readme-stats)</code>
+        <br><br> What we have just done is linked our server which has access to our private GitHub API in our Markdown. Just like that, we have a GUI to quickly and visually show our GitHub Stats
+    </p>
+    </div>
+    <br>
+
+
+    <br>
+    <button class="collapsible">Step 4: Customize Your Stats Appearance</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>What if this UI doesn't represent you? Well, you can customize the appearance of your GitHub stats by modifying the URL parameters such as `theme`, `show_icons`, etc., in the Markdown code to match your style.
+            <br><br> I personally like the name and look of the tokyonight them therefore I will go with that one.
+            <br><br> Here's how it looks: <code>[![Stezzly's GitHub stats](<u>https://github-readme-stats-khaki-kappa.vercel.app</u>/api?username=Stezzly&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)</code>
+        </p>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 5: Preview and Commit Changes</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>It is likely that you were commiting along the way, and if you were good for you. It's good to test along the way so problems don't back and stack up. 
+            Take one final last look and preview the changes on your GitHub repository to ensure everything looks good and is well personalized to your liking then
+             commit the changes to save the updated README with your GitHub stats displayed and complete the project.</p>
+    </div>
+</div>
+
+
+
+<h2 class="conclusion">Congratulations you now have a pretty visual representation of your Github stats and are ready to really show the world your skills as a coder!</h2>
+
+</button>
+
+<br><br><br>
+<h2>Additional Resources</h2>
+<ul>
+    <li><a href="https://github.com">Link to GitHub</a></li>
+    <li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">Link to Personal Token (API) Documentation</a></li>
+    <li><a href=" https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#deploy-on-your-own">Link to GitHub Read-Me-Stats</a></li>
+    <li><a href="https://vercel.com">Link to Personal Token (API) Documentation</a></li>
+</ul>
+
+<footer>
+    <a href="/index.html">Have Fun Coders!</a>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var readyButton = document.querySelector('.collapsible');
+        var projectSteps = document.getElementById('project-steps');
+    
+        readyButton.addEventListener('click', function() {
+            projectSteps.style.display = projectSteps.style.display === 'block' ? 'none' : 'block';
+        });
+    
+        var coll = document.querySelectorAll('#project-steps .collapsible');
+        coll.forEach(function(collapsible) {
+            collapsible.addEventListener('click', function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+    
+        var checkboxes = document.querySelectorAll('#project-steps .step-checkbox');
+        var progressBar = document.querySelector('.progress-bar');
+        var progressText = document.querySelector('.progress-text');
+        var totalSteps = checkboxes.length;
+        var completedSteps = 0;
+    
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    completedSteps++;
+                } else {
+                    completedSteps--;
+                }
+    
+                var progressPercentage = (completedSteps / totalSteps) * 100;
+                progressBar.style.width = progressPercentage + '%';
+                progressText.textContent = Math.round(progressPercentage) + '%';
+    
+                var conclusion = document.querySelector('.conclusion');
+                if (completedSteps === totalSteps) {
+                    conclusion.style.display = 'block';
+                } else {
+                    conclusion.style.display = 'none';
+                }
+            });
+        });
+    
+        // Function to toggle dark mode
+        var toggleDarkMode = function() {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        };
+    
+        // Add event listener for dark mode toggle
+        var darkModeToggleBtn = document.getElementById('darkModeToggleBtn');
+        darkModeToggleBtn.addEventListener('click', toggleDarkMode);
+    });
+    </script>
+
+
+</body>
+</html>

@@ -41,6 +41,11 @@ h1 {
     background-color: aqua;
 }
 
+.difficulty {
+    float: right;
+}
+
+
 .box-link {
     text-decoration: none;
     color: #333;
