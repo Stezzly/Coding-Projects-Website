@@ -17,9 +17,10 @@ h1 {
 
 .grid-item {
     border: 2px solid #ccc;
-    padding: 100px; 
+    padding: 50px; 
     text-align: center;
     width: 100%;
+    height: 50px;
     transition: transform 0.2s; 
     box-sizing: border-box; 
     background-color: #fff;
@@ -33,7 +34,7 @@ h1 {
 
 
 .grid-item:hover {
-    transform: scale(1.11); 
+    transform: scale(1.05); 
 }
 
 .grid-item:visited {
@@ -43,6 +44,8 @@ h1 {
 .box-link {
     text-decoration: none;
     color: #333;
+    height: 50px;
+    line-height: 15px;
     font-weight: bold;
     font-size: 1.2em;
 }

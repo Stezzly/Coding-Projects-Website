@@ -143,49 +143,15 @@ a.icon {
 }
 
 
+/* Mobile styles */
 @media (max-width: 768px) {
-    body, html {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-
-    .header-container,
-    .header-text,
-    .intro,
-    .grid-container,
-    .center-container,
-    footer {
-        width: 100%; /* Full width */
-        margin: 0; /* No horizontal margins */
-        padding: 0; /* No horizontal padding */
-        box-sizing: border-box; /* Include padding and border in width */
-    }
-
     .grid-container {
-        display: flex; /* Use flexbox instead of grid */
-        flex-direction: column; /* Stack children vertically */
-        gap: 15px; /* Space between items */
-        align-items: center; /* Center items horizontally */
+        grid-template-columns: 1fr; /* Stack boxes on top of each other */
     }
-
-    .box {
-        width: 90%; /* Take up most of the viewport width */
-        margin: 10px 0; /* Only vertical margins */
-    }
-
-    .box-stretch {
-        width: 90%; /* Match other boxes */
-        margin: 15px 0; /* Slightly more vertical margin */
-        order: -1; /* Place 'Other' at the top */
-    }
-
-    #gears {
-        width: 100vw; /* Set to the viewport width */
-        height: auto; /* Maintain aspect ratio */
-        position: relative; /* Position relative to the viewport */
-    }
-
-    footer {
-        position: relative; /* Ensure it's not fixed to allow natural flow */
+  
+    footer { /* Correct selector */
+        background-color: black; /* New color for mobile */
+        color: white;
     }
 }
 
