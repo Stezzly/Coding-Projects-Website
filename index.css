@@ -75,35 +75,33 @@ a.icon {
 }
 
 
-.gears-container {
-    position: relative;
-    display: inline-block;
-}
 
 #gears {
     display: block;
     margin: 0 auto; 
+    position: absolute;
 }
 
 .overlay-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-60%, -50%); 
+  
+    pointer-events: none; /* Clicks pass through to the canvas */
+}
+.grid-container {
     display: grid; 
-    grid-template-columns: repeat(2, 1fr); /* Represents Two columns */
+    grid-template-columns: repeat(4, 1fr); /* Represents Two columns */
     gap: 20px; 
     width: 50%; 
 }
 
 
 
-.centered-box {
+.box {
     padding:75px;
-    margin: 30px;
-    width:350px;
-    height: 200px;
-    line-height: 200px; /*Center Text inside box*/ 
+    margin: 35px;
+    width:220px;
+    height: 100px;
+    line-height: 100px; /*Center Text inside box*/ 
     text-align: center;
     background-color: #0092f3;
     color: #fff;
@@ -115,16 +113,20 @@ a.icon {
     font-size: 36px;
 }
 
-.centered-box:hover {
+.box:hover {
     background-color: #010c70; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     transform: scale(1.11);
 }
 
-.centered-box:visited {
+.-box:visited {
     background-color: #5d0170; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
+
+
+
+
 
 
 
