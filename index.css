@@ -143,6 +143,31 @@ a.icon {
 }
 
 
+/* Mobile styles */
+@media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Stack boxes on top of each other */
+    }
+  
+    .box, .box-stretch {
+      padding: 20px; /* Adjust padding for smaller screens */
+      margin: 10px; /* Adjust margin for smaller screens */
+      width: calc(100% - 20px); /* Adjust width to be full-width minus margin */
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+  
+    .center-container {
+      flex-direction: column; /* Stack center container content */
+    }
+  }
+  
+  /* This is to ensure the header text scales well on smaller screens */
+  .header-text {
+    margin-left: 0; /* Remove the dirty hack margin */
+    text-align: center;
+  }
+  
+
 
 
 
