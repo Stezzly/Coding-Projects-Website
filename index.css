@@ -91,7 +91,7 @@ a.icon {
     display: grid; 
     grid-template-columns: repeat(4, 1fr); /* Represents Two columns */
     gap: 20px; 
-    width: 100%; 
+    width: 94%; 
      /* border: solid black 5px; *- for visualization purposes*/
 }
 
@@ -110,9 +110,9 @@ a.icon {
 .box {
     padding:75px;
     margin: 35px;
-    width:50%;
-    height: 33%;
-    line-height: 100px; /*Center Text inside box*/ 
+    width:66%;
+    height: 50%;
+    line-height: 250px; /*Center Text inside box*/ 
     text-align: center;
     background-color: #0092f3;
     color: #fff;
@@ -121,7 +121,7 @@ a.icon {
     border-radius: 10px; 
     border-style: ridge;
     transition: transform 0.2s;
-    font-size: 36px;
+    font-size: 46px;
 }
 
 .box-stretch {
