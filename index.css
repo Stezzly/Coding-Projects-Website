@@ -144,28 +144,47 @@ a.icon {
 
 
 @media (max-width: 768px) {
-    body {
+    body, html {
+        margin: 0;
+        padding: 0;
         overflow-x: hidden; /* Prevent horizontal scroll */
     }
 
     .header-container,
-    .overlay-container,
-    .grid-container,
-    .center-container {
-        width: 100%; /* Ensure full width */
-        box-sizing: border-box; /* Include padding and border in the element's total width */
+    .header-text {
+        width: 100%; /* Ensure header text container is full width */
     }
 
-    .box,
-    .box-stretch {
-        width: auto; /* Allow boxes to fit the container width */
-        max-width: none; /* Remove any max-width restrictions */
-        margin: 10px; /* Adjust margin to ensure it does not cause overflow */
-        padding: 20px; /* Adjust padding to ensure it does not cause overflow */
+    .intro {
+        width: 100%; /* Stretch 'Hello World' text container to full width */
+        padding: 0 15px; /* Add padding on smaller screens */
+        box-sizing: border-box; /* Include padding in width calculation */
     }
 
-    .box-stretch {
-        width: calc(100% - 20px); /* Adjust width to be full-width minus margin */
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack boxes vertically */
+        padding: 0 15px; /* Add padding on smaller screens */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .box, .box-stretch {
+        margin: 10px auto; /* Center boxes with automatic horizontal margins */
+        padding: 20px; /* Adjust padding for smaller screens */
+        width: auto; /* Allow width to adjust based on the padding and content */
+        max-width: none; /* Remove max-width constraints */
+    }
+
+    #gears {
+        width: 100vw; /* Stretch canvas to viewport width */
+        height: auto; /* Adjust height automatically */
+        position: relative; /* Adjust position */
+        top: 0; /* Reset any previously set positioning */
+        left: 0; /* Reset any previously set positioning */
+    }
+
+    footer {
+        position: relative; /* Prevent footer from sticking to the bottom */
+        width: 100%; /* Ensure footer is full width */
     }
 }
 
