@@ -132,7 +132,7 @@ ol{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
+    color: lightslategray;
     font-size: 20pt;
     font-weight: 600;
 }
