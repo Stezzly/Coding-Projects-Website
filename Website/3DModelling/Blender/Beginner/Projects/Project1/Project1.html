@@ -94,7 +94,7 @@
 </div>
 
 <br><br><br>
-
+<blockquote><i>“We don’t make mistakes, just happy little accidents.”</i> - Bob Ross</blockquote>
 <button class="collapsible">Are you ready?</button>
 <div id="project-steps" style="display: none;">
     <h2><u>Project Steps:</u></h2>
@@ -104,7 +104,14 @@
         <ol>
             <li>Open Blender and start a new project.</li>
             <li>Delete the default cube by selecting it and pressing 'Delete'.</li>
+            <li>Get a gear picture from an online reference or, use the Add Mesh: Extra Objects Asset pack shown in the pictures below </li>
+            <li>And yes... doing this will give us a well modeled usable gear... but we want to create our own and learn each step so we can apply to future projects!</li>
         </ol>
+        <br>
+        <section>
+            <img src="Images/AssetStoreGuide.png" alt="Asset store guide">
+            <img src="Images/ExtraMeshAddon.png" alt="Extra Mesh Addon">
+        </section>
     </div>
     <br>
 
@@ -112,8 +119,8 @@
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
         <ol>
-            <li>Press 'Shift + A' and select 'Mesh' -> 'Circle'. Choose to fill it with 'Ngon'.</li>
-            <li>Enter Edit Mode ('Tab'), select all vertices, press 'E' then 'S' to extrude and scale the circle slightly inward to form the basic thickness of the gear.</li>
+            <li>Press 'Shift + A' and select 'Mesh' -> 'Cylinder'.</li>
+            <li>Press 'S' then 'Z' to scale the Cylinder in the Z axis to shorten its height to resemble the reference height. </li>
         </ol>
     </div>
     <br>
@@ -122,8 +129,11 @@
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
         <ol>
-            <li>Stay in Edit Mode. Use the Loop Cut tool ('Ctrl + R') to add multiple loop cuts around the circle. Slide them to space out where the gear teeth will be.</li>
-            <li>Select the faces where teeth will extrude. Use the extrude tool ('E') to pull these faces out, forming the teeth.</li>
+            <li>Press 'Tab' to enter Edit Mode and select face mode with '3'. On the faces creating a ring around the shape select every second face by 'Shift' + 'R-Click' 
+                <ol>TIP: You can quickly select all the faces you need but first selecting all outer face with 'Alt' + 'R-Click', on the left hand margin of the face. Then click the 'select' dropdown at the top left corner where we will select 'Checker Deselect' We will see every second face gets deselcted, giving us what we want.</ol>
+                <ol>If you have a keyboard with a number pad, you can use a handy little trick: Select one face then 'Shift' + '+' to select every second neighbour attached thus quickly selecting all of the outer faces.</ol>
+            </li>
+            <li>Once all outer faces are selected, right click a face and select <i><u>Extrude Faces along normals.</u></i>Bring your teeth outwards (a bit more than you would neccesary, you will see in the next step) and voila, the we have a basic gear.  </li>
         </ol>
     </div>
     <br>
@@ -131,16 +141,46 @@
     <button class="collapsible">Step 4: Refining the Teeth</button>
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol> Steps 4 and 5 will be regarding Refining the basic gear. This is where YOU get the chance to make it your own! Remember, the fun and beauty of creativity is being different! If everything was the same how boring would that be?
+            <li>But, theres no depth to it. It's a flat gear with very little characteristics. Even if are not creating a perfect 1/1 model, we can still do better and easily add character to our gear.</li>
+            <li>Remember we extruded our teeth out further than we wanted causing for a oddly proportioined gear? Well, now we are going to fix this.</li>
+            <li>If you did not click anywhere in the project you should stil have the extruded faces selected. Press 'S' and scale the faces inwards creating a rigeted and more realistic teeth look.</li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 5: Refining Top face</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
         <ol>
-            <li>Adjust the shape of each tooth using the scale and move tools to refine their appearance.</li>
-            <li>Apply a Subdivision Surface modifier to smooth out the teeth and gear edges if desired.</li>
+            <li>Select the top face and press 'I' to inset the face inwards a small bit.</li>
+            <li>Press 'G' then 'Z' to scale the face down in the z axis.</li>
+            <li>Now we will press 'I' to inset inwards again and then press 'E' to extrude downwards.</li>
+            <li>Repeat this step for how ever many rivits you want, we will choose twice</li>
+            <li>For the last rivit inset we will Press 'E', extrude again but upwards, to create an inner mechanism. </li>
+            <li>Press 'I' and inset the final face in as much as you can to try and create a single point in the middle of the face.</li>
+            <li>Press 'G' then 'Z' to scale the faces upwards to create a cone shape and creating a mechanism to spin on. </li>
+        </ol>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 6: Mirror modifier</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <ol>Our gear is looking good, although there is one last problem. If you haven't noticed, we have only modeled the top face of the gear, not the bottom. Fortunately, blender has a built in mirroring so we do not have to remodel this from scratch.
+            <li>If we go over to the properties inspector on the right of blender, click the <b>Wrench Icon</b> to open the modifiers section </li>
+            <li>Click Add modifier drop down, and select the mirror modifier </li>
+            <li>The mirror modifier automatically applies with the X axis mirrored, as we can see from the model, not the axis we want. 
+                <ol>Take as minute to think about which face axis we were working on earlier, this will tell you which face we need to flip.</ol>
+            </li>
+            <li>Did you figure it out? It was the Z axis! If we select the Z axis check box, and the Bisect Z axis, we can see we get a beautiful symetrical gear with complete symetrical work from what we did on the top face.</li>
         </ol>
     </div>
     <br>
     </div>
 
 
-<h2 class="conclusion">Congratulations you are now and are ready to head into the next section - Beginner - with confidence.</h2>
+<h2 class="conclusion">Congratulations you have created a gear from scratch in 6 easy steps. Now and are ready to head into the next section - Project 2 - with confidence.</h2>
 
 </button>
 
