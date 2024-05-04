@@ -3,193 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #f0f0f0;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            margin: 0;
-        }
-
-        /* Enhanced Typography for Clear Hierarchy */
-        h1, h2 {
-            font-weight: 700;
-            color: #0056b3;
-        }
-
-        /* Updated Collapsible Button Style */
-        .collapsible {
-            background-color: #007bff;
-            color: #ffffff;
-            cursor: pointer;
-            padding: 18px;
-            width: calc(100% - 36px);
-            border-radius: 5px;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 18px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .active, .collapsible:hover {
-            background-color: #0056b3;
-        }
-
-        /* Content Style */
-        .content {
-            padding: 20px;
-            display: none;
-            background-color: #e9f5fb;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        /* Progress Bar and Text Enhancements */
-        .progress-bar-container {
-            background-color: #ddd;
-            border-radius: 5px;
-            height: 20px;
-            position: relative;
-            margin: 20px 0;
-        }
-
-        .progress-bar {
-            background-color: #4CAF50;
-            height: 100%;
-            width: 0%;
-            position: absolute;
-            transition: width 0.4s ease;
-            border-radius: 5px;
-        }
-
-        .progress-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-weight: 500;
-        }
-
-        /* Custom List Style */
-        ul li::before {
-            content: '▹';
-            color: #007bff;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        /* Custom Link Style */
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Conclusion Section Style */
-        .conclusion {
-            background-color: #e9f5fb;
-            padding: 20px;
-            border-radius: 5px;
-            display: none;
-        }
-        .rating {
-            display: inline-block;
-        }
-
-        .star {
-            width: 24px;
-            height: 24px;
-            fill: #bbb;
-        }
-
-        .star-filled {
-            fill: #ffc107; /* Gold color for filled stars */
-        }
-
-        .rating-tooltip {
-            visibility: hidden;
-            width: 120px;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -60px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .rating:hover .rating-tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
-    </style>
+    <title>App Development - ChatGPT AutoComplete Bot</title>
+    <link rel="stylesheet" href="/CSS Themes/HomeStyles/BasicTheme.css">
 </head>
-<body>
+<body class="light-mode">
 
+<header class="header-container">
+    <div class="header-text">
+        <center><h1><i>ChatGPT AutoComplete Bot - Project 10</i></h1></center>
+    </div>
 
-<h1>Project Title</h1>
+    <div class="icons-container">
+        <a href="index.html" class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</a> 
+        <a href="Website/Extra/AboutMe.html" class="icon" aria-label="Book icon" role="img">&#x1F4DA;</a> 
+        <a href="Website/Extra/Settings.html" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</a>
+        <span id="darkModeToggleBtn" class="icon dark-mode-toggle" aria-label="Dark Mode Toggle" role="img">🌙</span>
+    </div>
+</header>
 
-<h2>Introduction</h2>
-<p>Welcome to the project showcase page for [Your Project Title]. In this section, we'll provide an overview of the project, its objectives, and what you can expect to learn from it.</p>
+<main>
+    <h1>Introduction to Creating an AutoComplete Bot</h1>
+    <p>This guide will show you how to create a Python script named ChatAutoComplete.py that automatically types "continue" and presses "Enter" every minute using the pyautogui library. This can be useful for keeping chat sessions active or testing automated inputs.</p>
 
-<h2>Objective</h2>
-<p>The main goal of this project is to [state the main objective or problem you aim to solve].</p>
+    <h2>Software Setup</h2>
+    <p>To begin, you'll need the following software installed:</p>
+    <ul>
+        <li>Python: Ensure you have Python installed on your system.</li>
+        <li>PyAutoGUI: We'll use PyAutoGUI to control keyboard inputs.</li>
+        <li>IDE or Text Editor: Use an IDE or text editor such as VS Code or Sublime Text to write and execute Python scripts.</li>
+    </ul>
 
-<h2>Hypothesis</h2>
-<p>Based on [background research/knowledge], we hypothesize that [state your hypothesis].</p>
+    <h2>Knowledge Prerequisites</h2>
+    <p>Before starting this project, you should be familiar with:</p>
+    <ul>
+        <li>Basic Python programming.</li>
+        <li>Installing Python libraries using pip.</li>
+        <li>Understanding of simple automation concepts.</li>
+    </ul>
 
-<h2>Hardware Setup</h2>
-<p>In this section, we'll outline all the hardware components required for the project. This includes:</p>
-<ul>
-    <li>Hardware Component 1</li>
-    <li>Hardware Component 2</li>
-    <!-- Add more components as necessary -->
-</ul>
+<hr class="lightyellow-hr">
 
-<h2>Software Requirements</h2>
-<p>Here, we'll detail all the software needed for the project, including:</p>
-<ul>
-    <li><img src="software_icon.png" alt="Software Icon" style="vertical-align: middle; width: 20px;"> Software 1</li>
-    <li><img src="software_icon.png" alt="Software Icon" style="vertical-align: middle; width: 20px;"> Software 2</li>
-    <!-- Add more software as necessary -->
-</ul>
-
-<h2>Knowledge Prerequisites</h2>
-<p>To successfully complete this project, it's recommended to have a basic understanding of [list any relevant concepts or technologies].</p>
-
-<h2>Difficulty Rating</h2>
-<div class="rating" aria-label="Project difficulty rating: 3 out of 5">
-    <!-- Dynamic star icons based on difficulty -->
-    <svg class="star star-filled" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <svg class="star" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <svg class="star" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <svg class="star" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <svg class="star" viewBox="0 0 24 24"><polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"/></svg>
-    <span class="rating-tooltip">Easy Difficulty</span>
-</div>
-<br><br>
-
-
-<h1><center>Project Time!!!</center></h1>
+<h1>Project Steps</h1>
 <div class="progress-bar-container">
     <div class="progress-bar"></div>
     <div class="progress-text">0%</div>
@@ -197,52 +51,66 @@
 
 <button class="collapsible">Are you ready?</button>
 <div id="project-steps" style="display: none;">
-    <button class="collapsible">Step 1: Brief description of the first step</button>
+
+    <button class="collapsible">Step 1: Install PyAutoGUI</button>
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
-        <p>Detailed instructions for Step 1.</p>
-        <p>Code snippets, if applicable, can be included here.</p>
+        <p>Open your terminal or command prompt and execute the following command to install the PyAutoGUI library: <code>pip install pyautogui</code></p>
     </div>
-    <button class="collapsible">Step 2: Brief description of the second step</button>
+    <br>
+
+    <button class="collapsible">Step 2: Create Python Script</button>
     <div class="content">
         <label><input type="checkbox" class="step-checkbox"> Done</label>
-        <p>Detailed instructions for Step 2.</p>
-        <p>Code snippets, if applicable, can be included here.</p>
+        <p>Create a new Python file named ChatAutoComplete.py and open it in your text editor. This file will contain the code that automates the typing and pressing of the "Enter" key.</p>
     </div>
+    <br>
+
+    <button class="collapsible">Step 3: Write the Script</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>Add the following Python code to your script:</p>
+        <p><code>
+        import pyautogui<br>
+        import time<br><br>
+        def type_and_press_enter():<br>
+            while True:<br>
+                pyautogui.typewrite('continue')<br>
+                pyautogui.press('enter')<br>
+                time.sleep(60)  # Waits for 60 seconds<br><br>
+        if __name__ == "__main__":<br>
+            type_and_press_enter()
+        </code></p>
+        <p>This script will type "continue" followed by pressing "Enter" every 60 seconds indefinitely.</p>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 4: Test the Script</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>Run your script by executing <code>python ChatAutoComplete.py</code> in the terminal. Ensure that the window where you want the text entered is active and selected.</p>
+    </div>
+    <br>
+
+    <button class="collapsible">Step 5: Deploy and Use</button>
+    <div class="content">
+        <label><input type="checkbox" class="step-checkbox"> Done</label>
+        <p>Once you verify that the script works as expected, you can use it as needed. Remember to monitor its usage closely to avoid unintended interactions with other applications.</p>
+    </div>
+    <br>
 </div>
 
-
-<h2 class="conclusion">Conclusion</h2>
-<p class="conclusion">Congratulations! You've completed the [Your Project Title] project. In this section, we'll summarize what you've achieved and provide next steps or potential areas for further exploration.</p>
-</button>
-
-
-<h2>Additional Resources</h2>
-<ul>
-    <li><a href="#">Link to relevant tutorials</a></li>
-    <li><a href="#">Link to documentation</a></li>
-    <!-- Add more links as necessary -->
-</ul>
+</main>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Initialize the "Are you ready?" collapsible
-        var readyButton = document.querySelector('.collapsible'); // Assuming it's the first button
+        var readyButton = document.querySelector('.collapsible');
         var projectSteps = document.getElementById('project-steps');
     
         readyButton.addEventListener('click', function() {
-            // Toggle visibility of project steps
             projectSteps.style.display = projectSteps.style.display === 'block' ? 'none' : 'block';
-            // Prevent further toggling by removing this event listener
-            this.removeEventListener('click', arguments.callee);
         });
     
-        // Initialize other collapsible controls and progress tracking within the project steps div
-        initializeCollapsiblesAndProgressTracking();
-    });
-    
-    function initializeCollapsiblesAndProgressTracking() {
-        // Script for other collapsible sections within the project steps
         var coll = document.querySelectorAll('#project-steps .collapsible');
         coll.forEach(function(collapsible) {
             collapsible.addEventListener('click', function() {
@@ -252,7 +120,6 @@
             });
         });
     
-        // Script for progress tracking
         var checkboxes = document.querySelectorAll('#project-steps .step-checkbox');
         var progressBar = document.querySelector('.progress-bar');
         var progressText = document.querySelector('.progress-text');
@@ -279,8 +146,12 @@
                 }
             });
         });
-    }
-    </script>
-    
+    });
+</script>
+
+<footer>
+    <a href="/index.html">Have Fun Coders!</a>
+</footer>
+
 </body>
 </html>
