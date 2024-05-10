@@ -89,7 +89,7 @@ a.icon {
 
 .grid-container {
     display: grid; 
-    grid-template-columns: repeat(4, 1fr); /* Represents Two columns */
+    grid-template-columns: repeat(4, 1fr); /* Represents 4 columns by 1 row */
     gap: 20px; 
     width: 94%; 
      /* border: solid black 5px; *- for visualization purposes*/
@@ -98,8 +98,8 @@ a.icon {
 .center-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    /* align-items: center;
+    flex-wrap: wrap; */
     /* border: solid black 5px; - for visualization purposes*/
 }
 
