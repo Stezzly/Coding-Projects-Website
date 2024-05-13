@@ -16,18 +16,21 @@ main {
 header {
     background-color: #1702dac9;
     padding: 1rem;
+    font-size: 2rem;
     color: #100147;
+    
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Improved alignment */
 }
+
 .header-text {
-    font-size: 20pt;
-    align-items: center;
+    flex-grow: 1; /* Allow for header and icons on same horizontal */
+    margin-left: 111px; /* Dirty way to center header text */
 }
+
 
 p {
     background-color: lightgray;
