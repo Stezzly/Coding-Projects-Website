@@ -45,7 +45,7 @@ p {
 
 /* Header Styles */
 header {
-    background-color: lightgray;
+    background-color: rgb(129, 169, 230);
     
     padding: 1rem;
     font-size: 2rem;
@@ -68,9 +68,8 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: lightgray;
+    background-color: #1802dad3;
     padding: 1rem;
-    font-size: 1.5rem;
     color: #100147;
     border: 10px solid lightgray;
     border-radius: 15px;
@@ -79,7 +78,8 @@ footer {
 }
 
 footer a {
-    text-decoration: underline;
+    text-decoration: none;
+    font-size: 20pt;
 }
 
 /* Collapsible Sections */
@@ -189,7 +189,7 @@ ol{
     width: 100%;
     transition: transform 0.2s;
     box-sizing: border-box;
-    background-color: #FFD43B;
+    background-color: rgb(129, 169, 230);
     background-size: cover;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 75px;
@@ -223,19 +223,4 @@ a.icon {
     transform: scale(1.2);
 }
 
-footer {
-    padding: 1rem;
-    text-align: center;
-    background-color: #1802dad3;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: #100147;
-    font-size: 16pt;
-}
-
-a{
-    color: #000000;
-    text-decoration: none;
-}
 

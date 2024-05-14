@@ -224,63 +224,11 @@
     <!-- Add more links as necessary -->
 </ul>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Initialize the "Are you ready?" collapsible
-        var readyButton = document.querySelector('.collapsible'); // Assuming it's the first button
-        var projectSteps = document.getElementById('project-steps');
-    
-        readyButton.addEventListener('click', function() {
-            // Toggle visibility of project steps
-            projectSteps.style.display = projectSteps.style.display === 'block' ? 'none' : 'block';
-            // Prevent further toggling by removing this event listener
-            this.removeEventListener('click', arguments.callee);
-        });
-    
-        // Initialize other collapsible controls and progress tracking within the project steps div
-        initializeCollapsiblesAndProgressTracking();
-    });
-    
-    function initializeCollapsiblesAndProgressTracking() {
-        // Script for other collapsible sections within the project steps
-        var coll = document.querySelectorAll('#project-steps .collapsible');
-        coll.forEach(function(collapsible) {
-            collapsible.addEventListener('click', function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                content.style.display = content.style.display === "block" ? "none" : "block";
-            });
-        });
-    
-        // Script for progress tracking
-        var checkboxes = document.querySelectorAll('#project-steps .step-checkbox');
-        var progressBar = document.querySelector('.progress-bar');
-        var progressText = document.querySelector('.progress-text');
-        var totalSteps = checkboxes.length;
-        var completedSteps = 0;
-    
-        checkboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    completedSteps++;
-                } else {
-                    completedSteps--;
-                }
-    
-                var progressPercentage = (completedSteps / totalSteps) * 100;
-                progressBar.style.width = progressPercentage + '%';
-                progressText.textContent = Math.round(progressPercentage) + '%';
-    
-                var conclusion = document.querySelector('.conclusion');
-                if (completedSteps === totalSteps) {
-                    conclusion.style.display = 'block';
-                } else {
-                    conclusion.style.display = 'none';
-                }
-            });
-        });
-    }
-    </script>
+<footer>
+    <a href="/index.html">Have Fun Coders!</a>
+</footer>
+
+<script src="/JavaScript/StepsCollapsible.js"></script>
     
 </body>
 </html>
