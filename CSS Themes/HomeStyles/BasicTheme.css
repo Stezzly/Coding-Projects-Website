@@ -219,12 +219,23 @@ a.icon {
 
 
 .icon:hover {
-    color: #FFD43B;
+    color: #bbbbbb;
     transform: scale(1.2);
 }
 
-.lightyellow-hr {
-    height: 10px; /* Thickness of the HR */
-    background-color: #FFD43B; /* Blue color */
-    border: none; /* Remove default border */
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #1802dad3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #100147;
+    font-size: 16pt;
 }
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+

@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to update canvas size and recreate gears on window resize
     function updateCanvasSize() {
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight/0.8;
+        canvas.height = window.innerHeight/1;
         createGears();
     }
 
