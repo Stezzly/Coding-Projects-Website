@@ -3,60 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html Introduction</title>
-    <link rel="stylesheet" href="/CSS Themes/HomeStyles/HTMLTheme.css">
+    <title>Introduction to Bash Programming</title>
+    <link rel="stylesheet" href="/CSS Themes/HomeStyles/BasicTheme.css">
 </head>
+<body class="light-mode">
+
+<header class="header-container">
+    <div class="header-text">
+        <center><h1><i>Introduction to Bash Programming</i></h1></center>
+    </div>
+
+    <div class="icons-container">
+        <a href="index.html" class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</a> 
+        <a href="Website/Extra/AboutMe.html" class="icon" aria-label="Book icon" role="img">&#x1F4DA;</a> 
+        <a href="Website/Extra/Settings.html" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</a>
+        <span id="darkModeToggleBtn" class="icon dark-mode-toggle" aria-label="Dark Mode Toggle" role="img">🌙</span>
+    </div>
+</header>
 
 <main>
-<body>
-    <header class="header-container">
-        <div class="header-text">
-            <center><h1><i>HTML Introduction</i></h1>
-                <h3>Work in Progress!!!</h3></center>            
+    <h1>Welcome to Bash Programming!</h1>
+    <p>This guide provides an easy-to-follow introduction to Bash, the Bourne Again SHell, which is a powerful command-line and scripting environment widely used on Linux and macOS. Bash is essential for managing operating systems, automating tasks, and running scripts.
+        <br>By the end of this guide, you will understand the basics of Bash programming, including how to execute commands and write simple scripts.</p>
+
+    <h2>Why should I use Bash?</h2>
+    <p>Bash is a versatile tool for system administration and automation. It is the default shell on most Linux systems and macOS, making it crucial for scripting and command-line operations. Bash scripts are used to automate repetitive tasks and manage system operations efficiently.</p>
+    
+    <h2>Challenges of Bash</h2>
+    <p>One of the challenges with Bash is that it can be unintuitive for those not familiar with UNIX-like environments. Script debugging can also be challenging, particularly for more complex tasks.</p>
+
+    <h2>What You'll Need</h2>
+    <p>To start programming in Bash, you'll need:</p>
+    <ul>
+        <li>Access to a Unix-like operating system (Linux or macOS).</li>
+        <li>A terminal emulator to access the shell.</li>
+    </ul>
+    
+    <h2>Bash Basics</h2>
+    <p>In this section, we'll cover the foundational elements of using Bash:</p>
+    <ul>
+        <li>Opening a terminal and accessing the Bash shell.</li>
+        <li>Basic Bash commands like <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>rm</code>.</li>
+        <li>Writing simple scripts to automate tasks.</li>
+    </ul>
+
+    <h2>Practical Example</h2>
+    <p>We'll go through a practical example where you'll write a Bash script to list all files in a directory and copy them to a backup directory.</p>
+
+    <hr class="lightyellow-hr">
+
+    <h1>Difficulty Rating</h1>
+    <div class="rating" aria-label="Project difficulty rating: 3 out of 5">
+        <!-- SVG Stars for rating -->
+    </div>
+    <center><h2>Moderate Difficulty</h2></center>
+    <br><br>
+
+    <h1><center>Project Time!!!</center></h1>
+    <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+        <div class="progress-text">0%</div>
+    </div>
+
+    <br><br><br>
+
+    <button class="collapsible">Are you ready?</button>
+    <div id="project-steps" style="display: none;">
+        <button class="collapsible">Step 1: Access the Bash Shell</button>
+        <div class="content">
+            <label><input type="checkbox" class="step-checkbox"> Done</label>
+            <p>Open your terminal. On Linux or macOS, it will typically default to Bash. On Windows, you may need to install a tool like Git Bash or enable the Windows Subsystem for Linux (WSL).</p>
         </div>
+        <br>
 
-        <div class="icons-container">
-            <a href  = index.html class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</a> 
-            <a href = "Website/Extra/AboutMe.html" class="icon" aria-label="Book icon" role="img"> &#x1F4DA;</a> 
-            <a href = "Website/Extra/Settings.html" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</a>
-            <a id="darkModeToggleBtn" class="icon dark-mode-toggle" aria-label="Dark Mode Toggle" role="img">🌙</a>
+        <button class="collapsible">Step 2: Write a Basic Script</button>
+        <div class="content">
+            <label><input type="checkbox" class="step-checkbox"> Done</label>
+            <p>Create a new file called <code>backup.sh</code> and add the following script:</p>
+            <pre>
+                #!/bin/bash
+                echo "Backing up files..."
+                cp -a /source/directory/* /backup/directory/
+                echo "Backup completed successfully."
+            </pre>
+            <p>This script copies all files from a source directory to a backup directory and prints a completion message.</p>
+        </div>
+        <br>
 
-        </div>       
-    </header>
+        <button class="collapsible">Step 3: Run Your Script</button>
+        <div class="content">
+            <label><input type="checkbox" class="step-checkbox"> Done</label>
+            <p>To run your script, make it executable with the command <code>chmod +x backup.sh</code> and then execute it by typing <code>./backup.sh</code>.</p>
+        </div>
+        <br>
+    </div>
 
-    
-        <p>
-             This will be a straightforward introduction for those who have never seen or touched any HTML code. It will give you all the basics you need to create a basic webpage, and bring you into the next section - Beginner - with confidence.
-        </p> 
+    <h2 class="conclusion">Congratulations! You have taken your first steps with Bash programming.</h2>
 
-        <p>With every project, we will be giving a difficulty rating as well as the requirements.</p>
-        <p>Project difficulty rating: 1-5 stars</p>
-
-            <ul>Project Requirements
-                <li>Requirement 1</li>
-                <li>Requirement 2</li>
-                <li>Requirement 3</li>
-                <li>Requirement 4</li>
-            </ul>
-        
-        
-        <p>
-            We are also going to start by creating a checklist, and checking off tasks that we have completed as we go. - (Future update - Sign in to save tasks)
-        </p>
-        
-        <ul> Project Checklist
-            <li>Checklist Item 1 Placeholder</li>
-            <li>Checklist Item 2 Placeholder</li>
-            <li>Checklist Item 3 Placeholder</li>
-            <li>Checklist Item 4 Placeholder</li>
-        </ul>
-    </main>
-    
+    <h2>Additional Resources</h2>
+    <ol>
+        <li><a href="https://www.gnu.org/software/bash/manual/" target="_blank">GNU Bash Manual</a></li>
+        <!-- Add more links as necessary -->
+    </ol>
 
     <footer>
-        <a href="/index.html">Have fun coders!</a>
+        <a href="/index.html">Explore More!</a>
     </footer>
+</main>
 
-  
+<script src="/JavaScript/StepsCollapsible.js"></script>
+<script src = "/JavaScript/DarkMode.js"></script>
+
 </body>
 </html>
