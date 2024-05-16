@@ -24,7 +24,7 @@
 <main>
     <h1>Welcome to C++ Programming!</h1>
     <p>This guide provides an easy-to-follow introduction to C++ programming, aimed at those who are new to coding. C++ builds on the foundation of C programming, enhancing it with object-oriented features that allow for more complex and flexible code structures.
-        By the end of this guide, you will understand the basics of C++ programming, including classes, objects, and basic data structures.</p>
+        By the end of this guide, you will have written and compiled your C++ code, HelloWorld.</p>
 
     <h2>Why should I use C++?</h2>
     <p>C++ is used extensively for developing complex software like games, real-time systems, and large-scale applications. It provides a blend of both high-level and low-level language features. Learning C++ offers a deep understanding of how software interacts with hardware, optimizes performance, and uses resources efficiently. Its object-oriented features make it ideal for developing large-scale applications with reusable and maintainable code.</p>
@@ -35,28 +35,33 @@
     <h2>What You'll Need</h2>
     <p>To start programming in C++, you'll need:</p>
     <ul>
-        <li>A C++ compiler like GCC or Clang.</li>
+        <li>A C++ compiler like GCC or Clang. We previously set up GCC by downloading MinGW and adding other extensions to visual studio code in the <a href="/Website/Coding/C/Introduction/Introduction.html">C Introduction</a></li>
         <li>An IDE or a text editor like Visual Studio Code, Code::Blocks, or CLion.</li>
     </ul>
     
-    <h2>C++ Programming Basics</h2>
-    <p>In this section, we'll cover the foundational elements of C++ programming:</p>
-    <ul>
-        <li>Basic syntax and structure of a C++ program.</li>
-        <li>Introduction to classes and objects.</li>
-        <li>Writing your first "Hello, World!" program in C++.</li>
-    </ul>
+    
 
-    <h2>Practical Example</h2>
-    <p>We'll go through a practical example where you'll create a simple class in C++ that encapsulates the properties and functions of a "Book".</p>
-
-    <hr class="lightyellow-hr">
 
     <h1>Difficulty Rating</h1>
-    <div class="rating" aria-label="Project difficulty rating: 4 out of 5">
-        <!-- SVG Stars for rating -->
+    <div class="rating" aria-label="Project difficulty rating: 2 out of 5">
+        <svg class="star star-filled" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="orange" stroke="black"/>
+        </svg>
+        <svg class="star" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+        </svg>
+        <svg class="star" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+        </svg>
+        <svg class="star" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+        </svg>
+        
+        <svg class="star" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+        </svg>
     </div>
-    <center><h2>Moderate to Challenging Difficulty</h2></center>
+    <center><h2>Easy Difficulty</h2></center>
     <br><br>
 
     <h1><center>Project Time!!!</center></h1>
@@ -69,7 +74,44 @@
 
     <button class="collapsible">Are you ready?</button>
     <div id="project-steps" style="display: none;">
-        <!-- Step by step guide similar to C -->
+        <button class="collapsible">Step 1: Set Up Your Environment</button>
+<div class="content">
+    <label><input type="checkbox" class="step-checkbox"> Done</label>
+    <p>The first step in C++ programming is setting up your development environment. Install a C++ compiler like GCC or Clang. Choose an editor that you feel comfortable with, such as Code::Blocks or Visual Studio Code. For Windows, you might prefer to use MinGW as your compiler. Make sure your compiler is accessible from your command line by testing it with the command <code>g++ --version</code> in your terminal.</p>
+</div>
+<br>
+
+<button class="collapsible">Step 2: Write Your First Program</button>
+<div class="content">
+    <label><input type="checkbox" class="step-checkbox"> Done</label>
+    <p>Open your editor and create a new file with a .cpp extension. Write the following C++ code to print "Hello, World!" to the console. Note the use of <code>&lt;iostream&gt;</code> instead of <code>&lt;stdio.h&gt;</code> and <code>using namespace std;</code>, which are common in C++ for handling input and output operations:</p>
+    <pre>
+        #include &lt;iostream&gt;
+        using namespace std;
+
+        int main() {
+            cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+            return 0;
+        }
+    </pre>
+    <p>Save your file. You might name it <code>HelloWorld.cpp</code>.</p>
+</div>
+<br>
+
+<button class="collapsible">Step 3: Compile Your Code and Examine the Results</button>
+<div class="content">
+    <label><input type="checkbox" class="step-checkbox"> Done</label>
+    <p>Compile your program through the terminal. This process is very similar to C but uses the C++ compiler. Follow these steps:</p>
+    <ol>
+        <li>Open your command line or terminal.</li>
+        <li>Change directory to where your <code>HelloWorld.cpp</code> file is located.</li>
+        <li>Type <code>g++ HelloWorld.cpp -o HelloWorld</code> to compile your program. This command tells the compiler to take the <code>HelloWorld.cpp</code> file, compile it, and output an executable named <code>HelloWorld</code>.</li>
+        <li>Run your program by typing <code>./HelloWorld</code> on Unix/Linux or <code>HelloWorld.exe</code> on Windows in the command line. You should see <code>Hello, World!</code> printed to the terminal.</li>
+    </ol>
+    <p>We can see why using a built-in compiler from an IDE can be simpler; however, understanding the command line compilation process is crucial for deeper learning and troubleshooting in software development.</p>
+</div>
+<br>
+
     </div>
 
     <h2 class="conclusion">Congratulations! You have taken your first steps into C++ programming.</h2>
