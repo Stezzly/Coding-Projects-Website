@@ -1,152 +1,184 @@
-
-
-/*Theme colors -  black, dark orange, light orange, gray, and white. */
+/* Basic Element Styles */
 body {
-    background-color: #000000;
+    background-color: #E34F26; /* Classic HTML Red */
     margin: 0;
     padding: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    border: 10px solid orange;
+    border: 10px solid #E34F26; /* Classic HTML Red */
     border-style: ridge;
 }
 
-header {
-    background-color: darkorange;
+a {
+    color: #000000; /* Black for links */
+}
+
+p {
+    background-color: #E34F26; /* Classic HTML Red */
     padding: 1rem;
     font-size: 2rem;
-    color: #100147;
-    border: 10px solid rgba(128, 128, 128, 0.712);
-    border-radius: 15px;
-    border-style: ridge;
-    text-align: center;
-}
-
-main{
-    width: 1500pxpx;
-    background-color: white;
-    border: 2px solid orange;
-    border-style:ridge;
-    padding: 20px;
-    margin: 20px;
-    
-}
-
-
-a{
-    color: #000000;
-}
-
-
-.header-container {
-    display: flex;
-    align-items: center;
-}
-
-.header-text {
-    flex-grow: 1;
-    margin-left: 111px;
-}
-
-.icons-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.icon {
-    margin: 1rem;
-    font-size: 3rem;
-    cursor: pointer;
-    color: #abb2bf;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-a.icon {
-    text-decoration: none;
-}
-
-.icon:hover {
-    color: #19d800a6;
-    transform: scale(1.2);
-}
-
-.dark-mode-toggle {
-    font-size: 2rem;
-    cursor: pointer;
-    color: #a0a0a0;
-}
-
-.dark-mode {
-    background-color: #282c35;
-    color: #ffffff;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Two columns per row */
-    gap: 20px;  /* Adjust the gap between items as needed */
-}
-
-.grid-item {
-    border: 10px solid rgba(128, 128, 128, 0.712);
-    border-radius: 15px;
-    border-style: ridge;
-    padding: 100px; 
-    text-align: center;
-    width: 100%;
-    transition: transform 0.2s; 
-    box-sizing: border-box; 
-    background-color: orange;
-    background-size: cover;
-}
-
-/* Work In Progress! Does not work */
-.grid-item.with-background {
-    background-image: url("/Website/Extra/GearForWebPNG.png");
-}
-
-.grid-item:hover {
-    transform: scale(1.11); 
-}
-
-
-.box-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.box-link:visited .grid-item {
-    background-color: rgb(199, 109, 0); /* sets visited box color*/
-    color: black; /* sets visited box text color*/
-}
-
-p{
-    background-color: darkorange;
-    padding: 1rem;
-    font-size: 2rem;
-    color: #100147;
-    border: 10px solid #000000;
+    color: #FFFFFF; /* White for text in paragraphs */
+    border: 10px solid #000000; /* Black border for paragraphs */
     border-radius: 15px;
     text-align: center;
     margin-bottom: 0;
 }
 
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #555555; /* Deep Grey for dark mode */
+}
 
-footer {
-    background-color: #323330;
+.dark-mode header {
+    background-color: #555555;
+}
+
+.dark-mode main {
+    background-color: #555555;
+}
+
+/* Header Styles */
+header {
+    background-color: #D3D3D3; /* Light Grey */
     padding: 1rem;
-    font-size: 1.5rem;
-    color: #100147;
-    border: 10px solid orange;
+    font-size: 2rem;
+    color: #000000; /* Black for text */
+    border: 10px solid #555555; /* Deep Grey */
+    border-radius: 15px;
+    border-style: ridge;
+    text-align: center;
+}
+
+/* Main Content Styles */
+main {
+    width: stretch;
+    background-color: #FFFFFF; /* White */
+    border: 10px solid #555555; /* Deep Grey */
+    border-style: ridge;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #D3D3D3; /* Light Grey */
+    padding: 1rem;
+    color: #000000; /* Black */
+    border: 10px solid #E34F26; /* Classic HTML Red */
     border-radius: 15px;
     text-align: center;
     border-style: ridge;
 }
 
-footer a{
-    color: #1e68c9;
-    text-decoration: underline;
+footer a {
+    text-decoration: none;
+    font-size: 20pt;
+    color: #000000; /* Black */
+}
+
+/* Collapsible Sections */
+.collapsible {
+    background-color: #E34F26; /* Classic HTML Red */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 5px;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: none;
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    background-color: #D3D3D3; /* Light Grey */
+    border-radius: 5px;
+    height: 40px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    background-color: #E34F26; /* Classic HTML Red */
+    width: 0%;
+    height: 200%;
+    position: absolute;
+    transition: width 0.4s ease;
+    border-radius: 5px;
+}
+
+.progress-text {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #555555; /* Deep Grey */
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+/* Rating and Stars Styling */
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star, .star-filled {
+    width: 24px;
+    height: 24px;
+}
+
+.star {
+    fill: none;
+    stroke: black;
+}
+
+.star-filled {
+    fill: #ffe072; /* Keeping a neutral gold color for stars */
+    stroke: black;
+}
+
+/* Grid and Icon Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #D3D3D3; /* Light Grey */
+    border: 10px solid rgba(128, 128, 128, 0.712);
+    border-radius: 15px;
+    border-style: ridge;
+    padding: 100px;
+    text-align: center;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+    font-size: 75px;
+}
+
+.grid-item:hover {
+    transform: scale(1.11);
+}
+
+.icon {
+    margin: 1rem;
+    padding: 10px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #abb2bf;
+}
+
+.icon:hover {
+    color: #2965f1;
+    transform: scale(1.2);
 }
