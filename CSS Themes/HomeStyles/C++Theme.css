@@ -1,24 +1,24 @@
 /* Basic Element Styles */
 body {
-    background-color: #9B9FEF; /* Light Blue */
+    background-color: #007ACC; /* Moderate Blue */
     margin: 0;
     padding: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    border: 10px solid #2B2A83; /* Deep Blue */
+    border: 10px solid #004482; /* Deep Blue */
     border-style: ridge;
 }
 
 a {
-    color: #68217A; /* Purple */
+    color: #000000; /* Black for links */
 }
 
 p {
-    background-color: #9B9FEF; /* Light Blue */
+    background-color: #007ACC; /* Moderate Blue */
     padding: 1rem;
     font-size: 2rem;
-    color: #2B2A83; /* Deep Blue */
-    border: 10px solid #000000; /* Black */
+    color: #FFFFFF; /* White for text */
+    border: 10px solid #000000; /* Black for border */
     border-radius: 15px;
     text-align: center;
     margin-bottom: 0;
@@ -26,24 +26,20 @@ p {
 
 /* Dark Mode Styles */
 .dark-mode {
-    background-color: #333333;
+    background-color: #2A2A2A; /* Dark grey for dark mode */
 }
 
-.dark-mode header {
-    background-color: #333333;
-}
-
-.dark-mode main {
-    background-color: #333333;
+.dark-mode header, .dark-mode main {
+    background-color: #2A2A2A; /* Consistent dark mode background */
 }
 
 /* Header Styles */
 header {
-    background-color: #68217A; /* Purple */
+    background-color: #004482; /* Deep Blue */
     padding: 1rem;
     font-size: 2rem;
     color: #FFFFFF; /* White */
-    border: 10px solid #2B2A83; /* Deep Blue */
+    border: 10px solid #D0D0D0; /* Light Grey */
     border-radius: 15px;
     border-style: ridge;
     text-align: center;
@@ -51,8 +47,8 @@ header {
 
 /* Main Content Styles */
 main {
-    background-color: lavender; /* White */
-    border: 10px solid #2B2A83; /* Deep Blue */
+    background-color: #FFFFFF; /* White */
+    border: 10px solid #007ACC; /* Moderate Blue */
     border-style: ridge;
     padding: 20px;
     margin: 20px;
@@ -60,10 +56,10 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #68217A; /* Purple */
+    background-color: #004482; /* Deep Blue */
     padding: 1rem;
     color: #FFFFFF; /* White */
-    border: 10px solid #9B9FEF; /* Light Blue */
+    border: 10px solid #007ACC; /* Moderate Blue */
     border-radius: 15px;
     text-align: center;
     border-style: ridge;
@@ -77,7 +73,7 @@ footer a {
 
 /* Collapsible Sections */
 .collapsible {
-    background-color: #2B2A83; /* Deep Blue */
+    background-color: #004482; /* Deep Blue */
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -90,21 +86,21 @@ footer a {
 
 .content {
     display: none;
-    background-color: #e9f5fb; /* Light Blue for visibility */
+    background-color: #D0D0D0; /* Light Grey */
     padding: 20px;
     border-radius: 5px;
 }
 
 /* Progress Bar Styles */
 .progress-bar-container {
-    background-color: #2B2A83;;
+    background-color: #D0D0D0; /* Light Grey */
     border-radius: 5px;
     position: relative;
     margin: 20px 0;
 }
 
 .progress-bar {
-    background-color: #2B2A83; /* Deep Blue */
+    background-color: #007ACC; /* Moderate Blue */
     width: 0%;
     height: 100%;
     border-radius: 5px;
@@ -117,7 +113,7 @@ footer a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #68217A; /* Purple */
+    color: #004482; /* Deep Blue */
     font-size: 20pt;
     font-weight: 600;
 }
@@ -141,7 +137,7 @@ footer a {
 }
 
 .star-filled {
-    fill: #ffe072; /* Neutral fill color for stars */
+    fill: #ffe072; /* A neutral gold color for stars */
     stroke: black;
 }
 
@@ -153,8 +149,8 @@ footer a {
 }
 
 .grid-item {
-    background-color: #9B9FEF; /* Light Blue */
-    border: 10px solid #ebebeb;
+    background-color: #007ACC; /* Moderate Blue */
+    border: 10px solid #D0D0D0; /* Light Grey */
     border-radius: 15px;
     padding: 100px;
     text-align: center;
@@ -173,7 +169,6 @@ footer a {
 }
 
 .icon:hover {
-    color: #2965f1; /* Adjust to match the theme */
+    color: #2965f1; /* Update this color to match the theme */
     transform: scale(1.2);
-    
 }
