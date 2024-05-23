@@ -1,65 +1,187 @@
-
-
-/* Theme colors - background color background-color: #ffd000;
-
-
-/*Theme colors -  black, and yellow */
+/* Basic Element Styles */
 body {
-    background-color: #1e68c9;
+    background-color: #0073E6; /* Light Blue */
     margin: 0;
+    height: stretch;
     padding: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    border: 10px solid #323330;
+    border: 10px solid #0033A0; /* Primary Blue */
     border-style: ridge;
 }
 
-header {
-    background-color: rgb(86, 81, 114);
+a {
+    color: #0073E6; /* Primary Blue */
+}
+
+p {
+    background-color: #0073E6; /* Light Blue */
     padding: 1rem;
     font-size: 2rem;
-    color: #100147;
-    border: 10px solid rgba(128, 128, 128, 0.712);
+    color: #FFFFFF; /* White */
+    border: 10px solid #0033A0; /* Primary Blue */
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333333; /* Darker for contrast */
+}
+
+.dark-mode header {
+    background-color: #333333;
+}
+
+.dark-mode main {
+    background-color: #333333;
+}
+
+/* Header Styles */
+header {
+    background-color: #0033A0; /* Primary Blue */
+    padding: 1rem;
+    font-size: 2rem;
+    color: #FFFFFF; /* White */
+    border: 10px solid #0073E6; /* Light Blue */
     border-radius: 15px;
     border-style: ridge;
     text-align: center;
 }
 
-main{
-    width: 1500pxpx;
-    background-color: white;
-    border: 2px solid orange;
-    border-style:ridge;
+/* Main Content Styles */
+main {
+    width: stretch;
+    background-color: #FFFFFF; /* White */
+    border: 10px solid #0073E6; /* Light Blue */
+    border-style: ridge;
     padding: 20px;
     margin: 20px;
-    
 }
 
-
-a{
-    color: #000000;
+/* Footer Styles */
+footer {
+    background-color: #0033A0; /* Primary Blue */
+    padding: 1rem;
+    color: #FFFFFF; /* White */
+    border: 10px solid #0073E6; /* Light Blue */
+    border-radius: 15px;
+    text-align: center;
+    border-style: ridge;
 }
 
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-size: 20pt;
+}
 
-.header-container {
+/* Collapsible Sections */
+.collapsible {
+    background-color: #0033A0; /* Primary Blue */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 5px;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: none;
+    background-color: #e9f5fb; /* Lighter shade for visibility */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 40px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    background-color: #0033A0; /* Primary Blue */
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    transition: width 0.4s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0033A0; /* Primary Blue */
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+/* Rating and Stars Styling */
+.rating {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.header-text {
-    flex-grow: 1;
-    margin-left: 111px;
+.star, .star-filled {
+    width: 24px;
+    height: 24px;
 }
 
-.icons-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+.star {
+    fill: none;
+    stroke: black;
 }
+
+.star-filled {
+    fill: #ffe072; /* Keeping a neutral fill color for stars */
+}
+
+.rating:hover .rating-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+/* Grid and Icon Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    border: 10px solid rgba(128, 128, 128, 0.712);
+    border-radius: 15px;
+    border-style: ridge;
+    padding: 100px;
+    text-align: center;
+    font-size: 30pt;
+    width: 100%;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+    background-color: rgb(129, 169, 230);
+    background-size: cover;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 75px;
+}
+
+.grid-item:hover {
+    transform: scale(1.11);
+}
+
 
 .icon {
     margin: 1rem;
+    padding: 10px;
     font-size: 3rem;
     cursor: pointer;
     color: #abb2bf;
@@ -70,88 +192,8 @@ a.icon {
     text-decoration: none;
 }
 
+
 .icon:hover {
-    color: #19d800a6;
+    color: #2965f1;
     transform: scale(1.2);
-}
-
-.dark-mode-toggle {
-    font-size: 2rem;
-    cursor: pointer;
-    color: #a0a0a0;
-}
-
-.dark-mode {
-    background-color: #282c35;
-    color: #ffffff;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Two columns per row */
-    gap: 20px;  /* Adjust the gap between items as needed */
-}
-
-.grid-item {
-    border: 10px solid rgba(128, 128, 128, 0.712);
-    border-radius: 15px;
-    border-style: ridge;
-    padding: 100px; 
-    text-align: center;
-    width: 100%;
-    transition: transform 0.2s; 
-    box-sizing: border-box; 
-    color: black; /*Text color*/
-    background-color: rgb(0, 3, 158);
-    background-size: cover;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 75px;
-}
-
-.grid-item:hover {
-    transform: scale(1.11); 
-}
-
-
-.box-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.box-link:visited .grid-item {
-    background-color: rgb(0, 68, 255);
-    color: black; /* sets visited box text color*/
-}
-
-p{
-    background-color: blue;
-    padding: 1rem;
-    font-size: 2rem;
-    color: #100147;
-    border: 10px solid #000000;
-    border-radius: 15px;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-
-footer {
-    background-color: #323330;
-    padding: 1rem;
-    font-size: 1.5rem;
-    color: #100147;
-    border: 10px solid rgb(17, 0, 255);
-    border-radius: 15px;
-    text-align: center;
-    border-style: ridge;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-footer a{
-    color: #1e68c9;
-    text-decoration: underline;
-}
-footer:hover{
-    transform: scale(1.02); 
 }
