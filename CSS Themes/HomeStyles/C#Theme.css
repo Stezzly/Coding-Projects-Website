@@ -82,7 +82,7 @@ footer a {
     cursor: pointer;
     padding: 18px;
     border-radius: 5px;
-    border: none;
+    border: dark purple;
     text-align: left;
     font-size: 18px;
     margin-bottom: 10px;
@@ -97,11 +97,14 @@ footer a {
 
 /* Progress Bar Styles */
 .progress-bar-container {
-    background-color: #2B2A83;;
+    background-color: #ddd;
     border-radius: 5px;
+    height: 40px;
     position: relative;
     margin: 20px 0;
+    border: solid;
 }
+
 
 .progress-bar {
     background-color: #2B2A83; /* Deep Blue */
@@ -136,13 +139,25 @@ footer a {
 }
 
 .star {
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
     fill: none;
     stroke: black;
 }
 
+
 .star-filled {
-    fill: #ffe072; /* Neutral fill color for stars */
+    fill: #ffe072;
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
     stroke: black;
+}
+
+
+
+.rating:hover .rating-tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Grid and Icon Styles */

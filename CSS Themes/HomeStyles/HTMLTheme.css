@@ -83,7 +83,7 @@ footer a {
     cursor: pointer;
     padding: 18px;
     border-radius: 5px;
-    border: none;
+    border: solid darkgray;
     text-align: left;
     font-size: 18px;
     margin-bottom: 10px;
@@ -98,20 +98,20 @@ footer a {
 
 /* Progress Bar Styles */
 .progress-bar-container {
-    background-color: #D3D3D3; /* Light Grey */
+    background-color: #ddd;
     border-radius: 5px;
     height: 40px;
     position: relative;
     margin: 20px 0;
+    border: solid;
 }
 
 .progress-bar {
-    background-color: #E34F26; /* Classic HTML Red */
+    background-color: #E34F26; /* Primary Blue */
     width: 0%;
-    height: 200%;
+    height: 100%;
     position: absolute;
     transition: width 0.4s ease;
-    border-radius: 5px;
 }
 
 .progress-text {
@@ -138,14 +138,27 @@ footer a {
 }
 
 .star {
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
     fill: none;
     stroke: black;
 }
 
+
 .star-filled {
-    fill: #ffe072; /* Keeping a neutral gold color for stars */
+    fill: #ffe072;
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
     stroke: black;
 }
+
+
+
+.rating:hover .rating-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 /* Grid and Icon Styles */
 .grid-container {

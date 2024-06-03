@@ -27,18 +27,13 @@ h1 {
     background-size: cover;  /* Ensures the background image covers the entire container */
 }
 
-/* Work In Progress! Does not work */
-.grid-item.with-background {
-    background-image: url("/Website/Extra/GearForWebPNG.png");
-}
-
 
 .grid-item:hover {
     transform: scale(1.05); 
 }
 
 .grid-item:visited {
-    background-color: aqua;
+    background-color: darkgray
 }
 
 .difficulty {

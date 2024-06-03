@@ -109,17 +109,15 @@ footer a {
     height: 40px;
     position: relative;
     margin: 20px 0;
+    border: solid;
 }
 
 .progress-bar {
-    background-color: #ffe072;
+    background-color: #FFD43B; /* Primary Blue */
     width: 0%;
-    height: 200%;
-    border: solid;
-    
+    height: 100%;
     position: absolute;
     transition: width 0.4s ease;
-    border-radius: 5px;
 }
 
 .progress-text {
@@ -127,7 +125,7 @@ footer a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
+    color: #555555; /* Deep Grey */
     font-size: 20pt;
     font-weight: 600;
 }
@@ -221,5 +219,5 @@ a.icon {
 .lightyellow-hr {
     height: 10px; /* Thickness of the HR */
     background-color: #FFD43B; /* Blue color */
-    border: none; /* Remove default border */
+    border: solid; /* Remove default border */
 }

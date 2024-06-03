@@ -10,12 +10,10 @@ body {
     border-style: ridge;
 }
 
-a {
-    color: #000000;
-}
+
 
 p {
-    background-color: lightgray;
+    background-color: darkgray;
     padding: 1rem;
     font-size: 2rem;
     color: #100147;
@@ -43,10 +41,8 @@ p {
 }
 
 
-/* Header Styles */
 header {
-    background-color: rgb(129, 169, 230);
-    
+    background-color: rgb(86, 81, 114);
     padding: 1rem;
     font-size: 2rem;
     color: #100147;
@@ -55,6 +51,7 @@ header {
     border-style: ridge;
     text-align: center;
 }
+
 
 /* Main Content Styles */
 main {
@@ -68,11 +65,11 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #1802dad3;
+    background-color: rgb(86, 81, 114);
     padding: 1rem;
+    font-size: 2rem;
     color: #100147;
-    border: 10px solid lightgray;
-    border-radius: 15px;
+    border: 10px solid rgba(128, 128, 128, 0.712);
     text-align: center;
     border-style: ridge;
 }
@@ -89,10 +86,10 @@ footer a {
     cursor: pointer;
     padding: 18px;
     border-radius: 5px;
-    border: none;
     text-align: left;
     font-size: 18px;
     margin-bottom: 10px;
+    border: solid;
 }
 
 .content {
@@ -109,33 +106,27 @@ footer a {
     height: 40px;
     position: relative;
     margin: 20px 0;
+    border: solid;
 }
 
 .progress-bar {
-    background-color: #002646;
+    background-color: green;
     width: 0%;
-    height: 200%;
-    border: solid;
-    
+    height: 100%;
     position: absolute;
     transition: width 0.4s ease;
-    border-radius: 5px;
-}
-
-
-ol{
-    color: black
 }
 
 .progress-text {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: lightslategray;
+    color: black; 
     font-size: 20pt;
     font-weight: 600;
 }
+
 
 /* Rating and Stars Styling */
 .rating {
@@ -189,7 +180,7 @@ ol{
     width: 100%;
     transition: transform 0.2s;
     box-sizing: border-box;
-    background-color: rgb(129, 169, 230);
+    background-color: rgb(179, 179, 179);
     background-size: cover;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 75px;
