@@ -1,4 +1,7 @@
-/* Basic Element Styles */
+
+/* Basic Styles */
+
+
 body {
     background-color: #0073E6; /* Light Blue */
     margin: 0;
@@ -42,7 +45,7 @@ p {
 header {
     background-color: #0033A0; /* Primary Blue */
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #FFFFFF; /* White */
     border: 10px solid #0073E6; /* Light Blue */
     border-radius: 15px;
@@ -120,7 +123,7 @@ footer a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #0033A0; /* Primary Blue */
+    color: #417dff; /* Primary Blue */
     font-size: 20pt;
     font-weight: 600;
 }
@@ -205,4 +208,36 @@ a.icon {
 .icon:hover {
     color: #2965f1;
     transform: scale(1.2);
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    h1, p {
+        font-size: 5.5vw; /* Increase font size slightly for better readability on small devices */
+    }
+
+    header {
+        font-size: 6vw;
+        padding: 3vw;
+    }
+
+    body {
+        border-width: 5px; /* Reduce border size to save space */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, p {
+        font-size: 6vw; /* Further increase font size for very small devices */
+    }
+
+    header {
+        font-size: 7vw;
+        padding: 4vw;
+    }
+
+    body {
+        border-width: 2px; /* Further reduce border size */
+    }
 }
