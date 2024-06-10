@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Gear constructor function
     function Gear(x, y, radius, imageSrc, speed) {
         // Gear properties
-        this.x = x;
-        this.y = y;
+        this.x = x; // Gear starting pos x+70
+        this.y = y; //Gear starting pos y+70
         this.radius = radius;
         this.image = new Image();
         this.image.src = imageSrc;

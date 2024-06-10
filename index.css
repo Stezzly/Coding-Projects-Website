@@ -9,10 +9,16 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    min-height: 100vh;
     padding: 2rem;
-    text-align: center;
     position: relative;
+    overflow: hidden;
 }
+
 
 header {
     background-color: #1702dac9;
@@ -32,6 +38,25 @@ header {
 .header-text {
     flex-grow: 1; /* Allow for header and icons on same horizontal */
     margin-left: 111px; /* Dirty way to center header text */
+}
+
+.intro {
+    width: 90%;
+    padding: 2rem;
+    margin: 10px;
+    max-width: 90%; /* Optional: controls the maximum width */
+    
+    text-align: center;
+    background-color: #960096;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-style: ridge;
+    transition: transform 0.2s;
+    font-size: 40px;
+    z-index: 1; /* Adjust z-index if needed */
 }
 
 
@@ -68,19 +93,18 @@ p {
     transform: scale(1.2);
 }
 
-.intro {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #100147;
-}
+
 
 #gears {
     display: block;
-    width: 100%; /* Set the width to 100% of the parent element */
-    max-width: 100vw; /* Max width is 100% of the viewport width */
+    width: 100%; /* Full width */
+    max-width: 100vw; /* Prevents exceeding viewport width */
+    height: 100vh; /* Full viewport height */
     position: absolute;
-    overflow: hidden; /* Prevent overflow */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    top: 0; /* Align top */
+    left: 70px; /* Align left */
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 
@@ -88,26 +112,24 @@ p {
 canvas {
     z-index: 0;
     position: absolute;
+
 }
 
 .overlay-container {
-    position: absolute; /* Overlays the boxes over the gears canvas properly allowing click actions */
-    top: 400%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
-    pointer-events: none;
+    position: relative; /* No need for absolute if layout works as a column */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1; /* Same level as intro, adjust if needed */
 }
+
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 10px;
     width: 95%;
     pointer-events: auto; /* Enable pointer events for the links */
 }
@@ -117,7 +139,16 @@ canvas {
     justify-content: center;
     pointer-events: auto; /* Enable pointer events for the links */
     margin-top: 20px;
-    width: 125%;
+    width: 100%;
+}
+.center-container .box {
+    width: calc(90%);
+    line-height: 3;
+}
+.center-container .box:hover {
+    background-color: #010c70;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
 }
 
 .box {
@@ -164,4 +195,105 @@ a{
     text-decoration: none;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 300px) {
+    .icons-container {
+        flex-direction: row;
+    }
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+    .overlay-container {
+        top: 400%;
+    }
+    #gears {
+        left: 0;
+    };
+}
 
+@media (max-width: 987px) {
+    .icons-container {
+        flex-direction: column;
+    }
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+    .overlay-container {
+        top: 350%;
+    }
+    #gears {
+        left: 0;
+    };
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5rem;
+    }
+
+    p, .box {
+        font-size: 1.25rem;
+        line-height: 2;
+        padding: 15px;
+    }
+
+    #gears {
+        left: 0;
+    };
+
+    .intro {
+        font-size: 1.25rem;
+    }
+
+    .header-text {
+        margin-left: 0;
+    }
+
+    .icon, .dark-mode-toggle {
+        font-size: 1.5rem;
+    }
+
+    .overlay-container {
+        top: 300%;
+    }
+    .grid-container {
+        
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+
+    #gears {
+        left: 0;
+    };
+
+    header {
+        font-size: 1.2rem;
+    }
+
+    p, .box {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .intro {
+        font-size: 1.25rem;
+    }
+
+    .icons-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .icon, .dark-mode-toggle {
+        font-size: 1.2rem;
+    }
+
+    .overlay-container {
+        top: 400%;
+    }
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+    }
+}
