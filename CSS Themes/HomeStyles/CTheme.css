@@ -1,7 +1,5 @@
 
 /* Basic Styles */
-
-
 body {
     background-color: #0073E6; /* Light Blue */
     margin: 0;
@@ -30,15 +28,15 @@ p {
 
 /* Dark Mode Styles */
 .dark-mode {
-    background-color: #333333; /* Darker for contrast */
+    background-color: #001570 /* Darker for contrast */
 }
 
 .dark-mode header {
-    background-color: #333333;
+    background-color: #0073E6;
 }
 
 .dark-mode main {
-    background-color: #333333;
+    background-color: #0073E6;
 }
 
 /* Header Styles */
