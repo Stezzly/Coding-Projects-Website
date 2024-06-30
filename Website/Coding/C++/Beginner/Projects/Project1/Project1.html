@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C# Project 1 - Hello World Console Application</title>
-    <link rel="stylesheet" href="/CSS Themes/HomeStyles/C%23Theme.css">
+    <title>C++ Project 1 - Hello World Program</title>
+    <link rel="stylesheet" href="/CSS Themes/HomeStyles/C++Theme.css">
 </head>
 <body class="light-mode">
 
 <header class="header-container">
     <div class="header-text">
-        <center><h1><i>C# Project 1 - Hello World Console Application</i></h1></center>
+        <center><h1><i>C++ Project 1 - Hello World Program</i></h1></center>
     </div>
 
     <div class="icons-container">
@@ -22,8 +22,8 @@
 </header>
 
 <main>
-    <h1>Welcome to C# Project 1 - Hello World Console Application</h1>
-    <p>This project will guide you through creating a simple console application in C# that prints "Hello, World!" to the screen. It's designed for beginners with no prior experience in programming.</p>
+    <h1>Welcome to C++ Project 1 - Hello World Program</h1>
+    <p>This project will guide you through creating a simple console application in C++ that prints "Hello, World!" to the screen. It's designed for beginners with no prior experience in programming.</p>
 
     <h2>Hardware Setup</h2>
     <p>Ensure you have the following hardware components:</p>
@@ -35,8 +35,8 @@
     <h2>Software Requirements</h2>
     <p>Here are the software tools you'll need for this project:</p>
     <ul>
-        <li><a href="https://dotnet.microsoft.com/download">Visual Studio Code</a> or <a href="https://visualstudio.microsoft.com/">Visual Studio</a> - These are popular Integrated Development Environments (IDEs) for C# development.</li>
-        <li><a href="https://dotnet.microsoft.com/download">.NET SDK</a> - Required to compile and run C# programs.</li>
+        <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> or <a href="https://www.jetbrains.com/clion/">CLion</a> - These are popular Integrated Development Environments (IDEs) for C++ development.</li>
+        <li><a href="https://gcc.gnu.org/">GCC</a> or <a href="https://visualstudio.microsoft.com/">Visual Studio</a> - Required to compile and run C++ programs.</li>
     </ul>
     
     <h2>Knowledge Prerequisites</h2>
@@ -78,7 +78,7 @@
     </div>
 
     <br><br><br>
-    <blockquote><i>“The journey of a thousand miles begins with one step.”</i> - Lao Tzu</blockquote>
+    <blockquote><i>"Act as if what you do makes a difference. It does."</i> — William James</blockquote>
 
     <button class="collapsible">Are you ready?</button>
     <div id="project-steps" style="display: none;">
@@ -87,8 +87,8 @@
         <div class="content">
             <label><input type="checkbox" class="step-checkbox"> Done</label>
             <ol>
-                <li>Download and install <a href="https://visualstudio.microsoft.com/">Visual Studio</a> or <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</li>
-                <li>Download and install the <a href="https://dotnet.microsoft.com/download">.NET SDK</a>.</li>
+                <li>Download and install <a href="https://code.visualstudio.com/">Visual Studio Code</a> or <a href="https://www.jetbrains.com/clion/">CLion</a>.</li>
+                <li>Ensure you have a C++ compiler installed. For example, you can install <a href="https://gcc.gnu.org/">GCC</a> or use the built-in compiler in <a href="https://visualstudio.microsoft.com/">Visual Studio</a>.</li>
             </ol>
         </div>
         <br>
@@ -97,14 +97,8 @@
         <div class="content">
             <label><input type="checkbox" class="step-checkbox"> Done</label>
             <ol>
-                <li>Open your chosen IDE (Visual Studio or Visual Studio Code).</li>
-                <li>Open a terminal in your IDE.</li>
-                <li>Type the following command to create a new console application:
-                    <pre><code>dotnet new console -n HelloWorldApp</code></pre>
-                </li>
-                <li>Navigate to the project directory:
-                    <pre><code>cd HelloWorldApp</code></pre>
-                </li>
+                <li>Open your chosen IDE (Visual Studio Code or CLion).</li>
+                <li>Create a new file named <code>hello_world.cpp</code>.</li>
             </ol>
         </div>
         <br>
@@ -113,20 +107,14 @@
         <div class="content">
             <label><input type="checkbox" class="step-checkbox"> Done</label>
             <ol>
-                <li>Open the `Program.cs` file in your IDE.</li>
-                <li>Replace the existing code with the following:
+                <li>Open the <code>hello_world.cpp</code> file in your IDE.</li>
+                <li>Type the following code:
                     <pre><code>
-using System;
+#include &lt;iostream&gt;
 
-namespace HelloWorldApp
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
 }
                     </code></pre>
                 </li>
@@ -135,19 +123,23 @@ namespace HelloWorldApp
         </div>
         <br>
 
-        <button class="collapsible">Step 4: Running the Application</button>
+        <button class="collapsible">Step 4: Compiling and Running the Application</button>
         <div class="content">
             <label><input type="checkbox" class="step-checkbox"> Done</label>
             <ol>
-                <li>In the terminal, type the following command to run your application:
-                    <pre><code>dotnet run</code></pre>
+                <li>Open the terminal in your IDE and navigate to the directory containing <code>hello_world.cpp</code>.</li>
+                <li>Type the following command to compile your application:
+                    <pre><code>g++ hello_world.cpp -o hello_world</code></pre>
+                </li>
+                <li>Type the following command to run your application:
+                    <pre><code>./hello_world</code></pre>
                 </li>
                 <li>You should see the output: <b>Hello, World!</b></li>
             </ol>
         </div>
     </div>
 
-    <h2 class="conclusion">Congratulations! You've created and run your first C# console application. Now you're ready to tackle more complex projects.</h2>
+    <h2 class="conclusion">Congratulations! You've created and run your first C++ console application. Now you're ready to tackle more complex projects.</h2>
 </main>
 
 <footer>
@@ -159,5 +151,3 @@ namespace HelloWorldApp
 
 </body>
 </html>
-
-
