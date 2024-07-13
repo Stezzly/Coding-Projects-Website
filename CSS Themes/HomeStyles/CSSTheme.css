@@ -236,7 +236,10 @@ a.icon {
     border-radius: 4px;
     padding: 20px;
     position: relative;
+     display: block;  /* Ensure it is always set to block when it should be visible */
 }
+
+
 
 .button-container {
     display: flex;
@@ -273,6 +276,7 @@ a.icon {
     padding: 10px;
     margin-top: 10px;
     background-color: white;
+    
 }
 
 .CodeMirror {
