@@ -4,7 +4,7 @@ This repository contains the source code for my personal portfolio website, show
 
 ## Website
 
-You can view my portfolio at [stezzly.github.io](https://stezzly.github.io)
+You can view my portfolio at [stephencrocker.net](http://stephencrocker.net)
 
 ## Features
 
@@ -27,13 +27,13 @@ To run this website locally:
 
 1. Clone the repository
 
-git clone https://github.com/Stezzly/Stezzly.github.io.git
+git clone https://github.com/Stezzly/stephencrocker.net.git
 
 2. Open the `index.html` file in your web browser
 
 ## Contributing
 
-While this is a personal portfolio, I appreciate any feedback or suggestions for improvement. Feel free to open an issue or submit a pull request if you notice any bugs or have ideas for enhancements.
+While this is a personal portfolio, I appreciate any feedback or suggestions for improvement. Please feel free to open an issue or submit a pull request if you notice any bugs or have ideas for enhancements. However, please note that my personal information and pictures are off-limits for use or sharing, while the code is open for contributions.
 
 ## License
 
