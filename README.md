@@ -1,10 +1,44 @@
+# Stephen Crocker's Portfolio
 
-# Welcome to LearnCS8 Resume Website
+This repository contains the source code for my personal portfolio website, showcasing my skills, experience, and projects in Computer Science and Business Administration.
 
-This is an template resume website built using Bootstrap. 
+## Website
 
-Follow the instructions on Lab 3 located at https://www.learncs8.com 
+You can view my portfolio at [stezzly.github.io](https://stezzly.github.io)
 
-Special thanks to the open source bootstrap libraries that made this website possible.
+## Features
 
-If you have any problems, please reach out to support on the LearnCS8.com homepage.
+- About Me: An introduction to my background and aspirations
+- Experience: Details of my work history and projects
+- Education: Information about my academic pursuits
+- Portfolio: Showcase of my projects and skills
+
+## Technologies Used
+
+- HTML
+- CSS 
+- SCSS 
+- JavaScript 
+- Bootstrap framework
+
+## Local Development
+
+To run this website locally:
+
+1. Clone the repository
+
+git clone https://github.com/Stezzly/Stezzly.github.io.git
+
+2. Open the `index.html` file in your web browser
+
+## Contributing
+
+While this is a personal portfolio, I appreciate any feedback or suggestions for improvement. Feel free to open an issue or submit a pull request if you notice any bugs or have ideas for enhancements.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contact
+
+Feel free to reach out to me for any questions or opportunities!
