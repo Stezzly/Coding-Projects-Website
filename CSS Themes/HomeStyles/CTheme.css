@@ -1,0 +1,241 @@
+
+/* Basic Styles */
+body {
+    background-color: #0073E6; /* Light Blue */
+    margin: 0;
+    height: stretch;
+    padding: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    border: 10px solid #0033A0; /* Primary Blue */
+    border-style: ridge;
+}
+
+a {
+    color: #0073E6; /* Box link text color */
+}
+
+p {
+    background-color: #0073E6; /* Light Blue */
+    padding: 1rem;
+    font-size: 2rem;
+    color: #FFFFFF; /* White */
+    border: 10px solid #0033A0; /* Primary Blue */
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #001570 /* Darker for contrast */
+}
+
+.dark-mode header {
+    background-color: #0073E6;
+}
+
+.dark-mode main {
+    background-color: #0073E6;
+}
+
+/* Header Styles */
+header {
+    background-color: #0033A0; /* Primary Blue */
+    padding: 1rem;
+    font-size: 1rem;
+    color: #FFFFFF; /* White */
+    border: 10px solid #0073E6; /* Light Blue */
+    border-radius: 15px;
+    border-style: ridge;
+    text-align: center;
+}
+
+/* Main Content Styles */
+main {
+    width: stretch;
+    background-color: #FFFFFF; /* White */
+    border: 10px solid #0073E6; /* Light Blue */
+    border-style: ridge;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0033A0; /* Primary Blue */
+    padding: 1rem;
+    color: #FFFFFF; /* White */
+    border: 10px solid #0073E6; /* Light Blue */
+    border-radius: 15px;
+    text-align: center;
+    border-style: ridge;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-size: 20pt;
+}
+
+/* Collapsible Sections */
+.collapsible {
+    background-color: #0033A0; /* Primary Blue */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 5px;
+    border: solid black;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: none;
+    background-color: #e9f5fb; /* Lighter shade for visibility */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 40px;
+    position: relative;
+    margin: 20px 0;
+    border: solid;
+}
+
+.progress-bar {
+    background-color: #0033A0; /* Primary Blue */
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    transition: width 0.4s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #417dff; /* Primary Blue */
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+/* Rating and Stars Styling */
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star, .star-filled {
+    width: 24px;
+    height: 24px;
+}
+
+.star {
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
+    fill: none;
+    stroke: black;
+}
+
+
+.star-filled {
+    fill: #ffe072;
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
+    stroke: black;
+}
+
+
+
+.rating:hover .rating-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Grid and Icon Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    border: 10px solid rgba(128, 128, 128, 0.712);
+    border-radius: 15px;
+    border-style: ridge;
+    padding: 100px;
+    text-align: center;
+    font-size: 30pt;
+    width: 100%;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+    background-color: rgb(129, 169, 230);
+    background-size: cover;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 75px;
+}
+
+.grid-item:hover {
+    transform: scale(1.11);
+}
+
+
+.icon {
+    margin: 1rem;
+    padding: 10px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #abb2bf;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+a.icon {
+    text-decoration: none;
+}
+
+
+.icon:hover {
+    color: #2965f1;
+    transform: scale(1.2);
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    h1, p {
+        font-size: 5.5vw; /* Increase font size slightly for better readability on small devices */
+    }
+
+    header {
+        font-size: 6vw;
+        padding: 3vw;
+    }
+
+    body {
+        border-width: 5px; /* Reduce border size to save space */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, p {
+        font-size: 6vw; /* Further increase font size for very small devices */
+    }
+
+    header {
+        font-size: 7vw;
+        padding: 4vw;
+    }
+
+    body {
+        border-width: 2px; /* Further reduce border size */
+    }
+}

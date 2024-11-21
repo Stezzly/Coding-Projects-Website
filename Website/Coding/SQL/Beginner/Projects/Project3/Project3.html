@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Project #3 - Even or Odd</title>
+    <link rel="stylesheet" href="/CSS Themes/HomeStyles/CTheme.css">
+</head>
+<body class="light-mode">
+
+<header class="header-container">
+    <div class="header-text">
+        <center><h1><i>C Programming Project #3 - Even or Odd</i></h1></center>
+    </div>
+
+    <div class="icons-container">
+        <a href="index.html" class="icon" aria-label="Computer icon" role="img">&#x1F4BB;</a> 
+        <a href="Website/Extra/AboutMe.html" class="icon" aria-label="Book icon" role="img">&#x1F4DA;</a> 
+        <a href="Website/Extra/Settings.html" class="icon" aria-label="Settings Icon" role="img">&#x1F6E0;</a>
+        <span id="darkModeToggleBtn" class="icon dark-mode-toggle" aria-label="Dark Mode Toggle" role="img">🌙</span>
+    </div>
+</header>
+
+<main>
+    <h1>Welcome to C Programming - Checking if a Number is Even or Odd</h1>
+    <p>This guide will help you write a simple C program that checks if a given number is even or odd. It's designed for those who are starting to learn C programming.</p>
+
+    <h2>Setup Requirements</h2>
+    <p>Before you begin, make sure you have the following:</p>
+    <ul>
+        <li>A text editor (Notepad++, Sublime Text, or any IDE like Code::Blocks)</li>
+        <li>A C compiler (GCC recommended)</li>
+    </ul>
+
+    <h1>Difficulty Rating</h1>
+    <div class="rating" aria-label="Project difficulty rating: 2 out of 5">
+        <!-- Dynamic star icons based on difficulty -->
+        <svg class="star star-filled" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="orange" stroke="black"/>
+        </svg>
+        <svg class="star" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+        </svg>
+        <svg class="star" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+        </svg>
+        <svg class="star" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+        </svg>
+        
+        <svg class="star" viewBox="0 0 24 24">
+            <polygon points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21" fill="none" stroke="black"/>
+        </svg>
+    </div>
+    <center><h2>Easy Difficulty</h2></center>
+    
+    <br><br>
+    <h1><center>Project Time!!!</center></h1>
+    <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+        <div class="progress-text">0%</div>
+    </div>
+
+    <button class="collapsible">Are you ready?</button>
+    <div id="project-steps" style="display: none;">
+        <h2><u>Project Steps:</u></h2>
+        <button class="collapsible">Step 1: Write the Code</button>
+        <div class="content">
+            <label><input type="checkbox" class="step-checkbox"> Done</label>
+            <p>First, let's create a new text file in your text editor and save it as 'evenOdd.c'. This file will contain our C code.</p>
+            <p>We'll start by including the standard input/output library with <code>#include &lt;stdio.h&gt;</code>, which allows us to use functions like <code>printf()</code> and <code>scanf()</code>.</p>
+            <p>Then, we declare our main function where our code will execute. Inside, we'll declare an integer variable <code>num</code> to store the user input.</p>
+            <p>We'll prompt the user to enter an integer with <code>printf()</code>, and use <code>scanf()</code> to read and store that input.</p>
+            <p>Using the modulus operator <code>%</code>, we'll determine if <code>num</code> is even or odd. If a number is divisible by 2 (i.e., <code>num % 2 == 0</code>), it's even; otherwise, it's odd. We'll output the result using <code>printf()</code>.</p>
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    if (num % 2 == 0)
+        printf("%d is even.", num);
+    else
+        printf("%d is odd.", num);
+
+    return 0;
+}
+            </pre>
+            <p>This program checks if the entered integer is even or odd.</p>
+        </div>
+
+        <button class="collapsible">Step 2: Compile the Program</button>
+        <div class="content">
+            <label><input type="checkbox" class="step-checkbox"> Done</label>
+            <p>Use your C compiler to compile the code. For GCC, you can use the following command in the terminal:</p>
+            <pre>gcc -o evenOdd yourProgram.c</pre>
+            <p>Alternatively, if you are using an IDE, you can often compile programs with a simple click of a button. Refer to the <a href="Website/Extra/AboutMe.html">Introduction Page</a> for more details on using your specific IDE.</p>
+            <p>Replace "yourProgram.c" with the name of your file.</p>
+        </div>
+
+        <button class="collapsible">Step 3: Run the Program</button>
+        <div class="content">
+            <label><input type="checkbox" class="step-checkbox"> Done</label>
+            <p>After compiling the code, run the executable:</p>
+            <pre>./evenOdd</pre>
+            <p>In an IDE, running the program can also typically be done with the click of a button. See the <a href="Website/Extra/AboutMe.html">Introduction Page</a> for guidance specific to your IDE.</p>
+            <p>Follow the on-screen prompts to enter an integer and see if it's even or odd.</p>
+        </div>
+    </div>
+
+    <h2 class="conclusion">Congratulations! You have written a C program to check if a number is even or odd.</h2>
+</main>
+
+<footer>
+    <a href="/index.html">Have Fun Coders!</a>
+</footer>
+
+<script src="/JavaScript/StepsCollapsible.js"></script>
+<script src="/JavaScript/DarkMode.js"></script>
+
+</body>
+</html>

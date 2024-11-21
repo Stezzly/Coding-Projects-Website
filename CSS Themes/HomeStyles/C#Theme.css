@@ -1,0 +1,193 @@
+/* Basic Element Styles */
+body {
+    background-color: #9B9FEF; /* Light Blue */
+    margin: 0;
+    padding: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    border: 10px solid #2B2A83; /* Deep Blue */
+    border-style: ridge;
+}
+
+a {
+    color: #68217A; /* Purple */
+}
+
+p {
+    background-color: #9B9FEF; /* Light Blue */
+    padding: 1rem;
+    font-size: 2rem;
+    color: #2B2A83; /* Deep Blue */
+    border: 10px solid #000000; /* Black */
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333333;
+}
+
+.dark-mode header {
+    background-color: #333333;
+}
+
+.dark-mode main {
+    background-color: #333333;
+}
+
+/* Header Styles */
+header {
+    background-color: #68217A; /* Purple */
+    padding: 1rem;
+    font-size: 2rem;
+    color: #FFFFFF; /* White */
+    border: 10px solid #2B2A83; /* Deep Blue */
+    border-radius: 15px;
+    border-style: ridge;
+    text-align: center;
+}
+
+/* Main Content Styles */
+main {
+    background-color: lavender; /* White */
+    border: 10px solid #2B2A83; /* Deep Blue */
+    border-style: ridge;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #68217A; /* Purple */
+    padding: 1rem;
+    color: #FFFFFF; /* White */
+    border: 10px solid #9B9FEF; /* Light Blue */
+    border-radius: 15px;
+    text-align: center;
+    border-style: ridge;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-size: 20pt;
+}
+
+/* Collapsible Sections */
+.collapsible {
+    background-color: #2B2A83; /* Deep Blue */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 5px;
+    border: dark purple;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: none;
+    background-color: #e9f5fb; /* Light Blue for visibility */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 40px;
+    position: relative;
+    margin: 20px 0;
+    border: solid;
+}
+
+
+.progress-bar {
+    background-color: #2B2A83; /* Deep Blue */
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    transition: width 0.4s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #68217A; /* Purple */
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+/* Rating and Stars Styling */
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star, .star-filled {
+    width: 24px;
+    height: 24px;
+}
+
+.star {
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
+    fill: none;
+    stroke: black;
+}
+
+
+.star-filled {
+    fill: #ffe072;
+    width: 5vw;  /* Example using viewport width */
+    height: 5vw; /* Same as width to maintain aspect ratio */
+    stroke: black;
+}
+
+
+
+.rating:hover .rating-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Grid and Icon Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #9B9FEF; /* Light Blue */
+    border: 10px solid #ebebeb;
+    border-radius: 15px;
+    padding: 100px;
+    text-align: center;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 75px;
+}
+
+.grid-item:hover {
+    transform: scale(1.11);
+}
+
+.icon {
+    color: #abb2bf;
+}
+
+.icon:hover {
+    color: #2965f1; /* Adjust to match the theme */
+    transform: scale(1.2);
+    
+}
